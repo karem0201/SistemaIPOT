@@ -4,7 +4,9 @@
 /*************************
 *******Typography******
 **************************/
-
+*{
+      box-sizing: :border-box;
+}
 body {
   background: #fff;
   font-family: 'Open Sans', sans-serif;
@@ -2642,4 +2644,9 @@ shortcodes page css
 #footer ul > li {
   display: inline-block;
   margin-left: 15px;
+}
+
+.active{
+      display: block;
+
 }

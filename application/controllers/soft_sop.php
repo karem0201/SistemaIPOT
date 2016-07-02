@@ -58,7 +58,7 @@ class Soft_sop extends CI_Controller
             $this->load->model(array('mpaciente'));
             $result = $this->mpaciente->mostrar();
             $data= array('paciente'=> $result, 'link'=>'cirugia/nuevo');
-            $this->load->view('vintranet/listaPacte', $data);
+            $this->load->view('vsoft_sop/registrarCirugia', $data);
             $this->load->view('vsoft_sop/footer');
 
       }

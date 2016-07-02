@@ -52,4 +52,4 @@
 <script src="<?=base_url()?>plantillas/dist/js/sb-admin-2.js"></script>
 
 <!--  -->
-<script src="<?=base_url()?>plantillas/js/tableadd-delete.js"></script>
+<script src="<?=base_url()?>plantillas/js/script-project.js"></script>
