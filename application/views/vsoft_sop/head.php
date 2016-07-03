@@ -38,12 +38,12 @@
 
 <!-- Metis Menu Plugin JavaScript -->
 <script src="<?=base_url()?>plantillas/bower_components/metisMenu/dist/metisMenu.min.js"></script>
-
-<script src="<?=base_url()?>plantillas/js/bootstrap.min.js"></script>
+<script src="<?=base_url()?>plantillas/js/bootstrap.js"></script>
 <script src="<?=base_url()?>plantillas/js/jquery.prettyPhoto.js"></script>
 <script src="<?=base_url()?>plantillas/js/jquery.isotope.min.js"></script>
 <script src="<?=base_url()?>plantillas/js/main.js"></script>
 <script src="<?=base_url()?>plantillas/js/wow.min.js"></script>
+
 
 <!-- DataTables JavaScript -->
 <script src="<?=base_url()?>plantillas/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
@@ -53,3 +53,6 @@
 
 <!--  -->
 <script src="<?=base_url()?>plantillas/js/script-project.js"></script>
+
+<!--  autocompletar compatible con bootstrap 3-->
+<script src="<?=base_url()?>plantillas/js/typeahead.js"></script>

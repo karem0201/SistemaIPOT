@@ -62,6 +62,23 @@ class Soft_sop extends CI_Controller
             $this->load->view('vsoft_sop/footer');
 
       }
+
+      public function mostrarPacientes()
+      {
+            $searchTerm = $this->input->get('name');
+            $this->load->model(array('mpaciente'));
+            $q= $this->mpaciente->mostrarNombres($searchTerm);
+
+            $i=0;
+            foreach ($q as $key ) {
+                  $array[$i]=$key->apMaterno.", ".$key->nombre;
+                  $i++;
+            }
+
+            echo json_encode ($array);
+            //return json_encode ($q);
+
+      }
 }
 
  ?>

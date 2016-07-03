@@ -22,6 +22,17 @@ class Mpaciente extends CI_Model
                   return $query->row();
              }
       }
+
+      public function mostrarNombres($search='')
+      {
+            $this->db->select('p.nombre, p.apMaterno');
+            $this->db->from('paciente p');
+            $this->db->like('p.apPaterno',$search);
+            $this->db->or_like('p.nombre',$search);
+            $this->db->order_by('p.apPaterno','ASC');
+            $q = $this->db->get();
+            return $q->result();
+      }
 }
 
  ?>

@@ -68,6 +68,8 @@ jQuery(function($) {'use strict',
 		social_tools: false
 	});
 
+
+	//pegar el navegador
 	var $nav = $('#navegador');
 	var $navTop = $nav.offset().top;
 	var pegarNav = function(){
@@ -79,10 +81,12 @@ jQuery(function($) {'use strict',
 			$nav.removeClass('sticky')
 		}
 	}
-	//reg_cirugia
+
 	$(window).on('scroll',pegarNav);
 
-	
+
+
+
 
 
 

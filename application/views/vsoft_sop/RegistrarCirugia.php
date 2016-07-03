@@ -8,47 +8,20 @@
            <div class="col-lg-10 col-lg-offset-2 col-md-10 col-md-offset-1">
                  <?php echo form_open('cirugia/insertar'); ?>
                  <div class="row">
-                      <div class="col-lg-4"><?php
-                      $atrib=array('readonly'=>'readonly');
-                      echo form_input_text('karem');
-                        echo
-                        form_input_value('paciente','Paciente',$atrib,$paciente->apPaterno." ".$paciente->apMaterno.", ".$paciente->nombre);
-                        $attr=array('style'=>'display:none', 'value'=>$paciente->idPaciente);
-                        form_input_text('idPaciente','',$attr);
 
-                        $attr=array('style'=>'display:none');
-                        form_input_text('idListaMat','',$attr);
-                        ?>
-                       </div>
-                       <div class="col-lg-3"><?php
-                             echo form_input_value('hhcc','Historia Clinica',$atrib,$paciente->hhcc);
-                           ?>
-                       </div>
-                 </div>
-                 <div class="row">
-                        <div class="col-lg-3"> <label for="">Categoria</label>
-                        <?php
+                       <div class="row">
+                            <label for="skills">Skills: </label>
+                            <input  type="text" id="k"  name="name" data-provide="typeahead" class="col-md-3 form-control" data-items="4"  autocomplete="off">
+                            <br>
+                            <input type="text" class="col-md-3" data-provide="typeahead" data-items="4" data-source='["Almeria", "Granada", "Málaga", "Jaén", "Sevilla", "Córdoba", "Cádiz"]' >
+                      </div>
+                      <div class="row">
+                            <input type="text" name="name" value="">
+                            <option value="">alabama</option>
+                            <option value="">gutierrez</option>
 
-                              foreach ($producto as $key ) {
-                                         $values[$key->idTipoMat] =  $key->tipoMat ;
-                                   }//llenar la tabla ciudad con el primer tipo para la seleccion inicial
-                              echo form_input_select('idCategoria');
-                              ?><option value="0" selected>seleccione </option> <?php
-                              echo select_options($values);
-                        ?>
-                       </div>
-                       <div class="col-lg-3"> <label for="">Material</label>
-                       <?php
-                       echo form_input_select('idMaterial');
-                       ?><option value="0">seleccione </option> <?php
-                       echo select_options();
-                       ?>
-                       </div>
-                       <select id="MySelect">
-                                <option>AMERICA</option>
-                                <option>INDIA</option>
-                                <option>JAPAN</option>
-                    </select>
+                      </div>
+              </div>
 
 
                        <div class="col-lg-1">
@@ -58,6 +31,7 @@
                        ?>
                        </div>
                        <div class="col-lg-4">
+
                              <div class="form-group">
                              <label class = "name" for="">-</label>
                              <br>
@@ -137,14 +111,15 @@
 
 
                });
+               });
 
-               $()
 
-         });
 
-         $(document).ready(function(){
-          $("#MySelect").combify();
-         });
+
+
+
+
+
 
 
 

@@ -66,5 +66,27 @@
                   };
 
 
+//pruebas para realizar typeahead
+                  var auto = $("#k")
+                  // $.get('mostrarPacientes?name='+$(auto).val(), function(data){
+                  //
+                  //       $(auto).typeahead({ source:data });
+                  //       console.log(data);
+                  //    },'json');
+                     //example_collection.json
+                     // ["item1","item2","item3"]
+
+                  $(auto).change({
+                         source : function (query, process){
+                              return $.get( 'mostrarPacientes?name='+$(auto).val(),  function(data){console.log(data);
+                                  $(auto).typeahead({ source:data });
+                           });
+                     }
+                     //    source: function(auto,process){
+                     //          return $.post( 'mostrarPacientes?name='+$(auto).val(),  function  ( data )  {console.log(data);
+                     //                return data;
+                     //          });
+                     //   }
+                  });
 
             });
