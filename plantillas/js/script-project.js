@@ -67,26 +67,56 @@
 
 
 //pruebas para realizar typeahead
-                  var auto = $("#k")
-                  // $.get('mostrarPacientes?name='+$(auto).val(), function(data){
-                  //
-                  //       $(auto).typeahead({ source:data });
-                  //       console.log(data);
-                  //    },'json');
-                     //example_collection.json
-                     // ["item1","item2","item3"]
+ //                  var auto = $("#pacientes")
+ //                  $(auto).typeahead({ source: function(query){
+ //                   return $.get('mostrarPacientes?name='+$(auto).val(), function(data){
+ //                        console.log(data);
+ //                        return data;
+ //                     },'json');
+ //               }
+ // });
 
-                  $(auto).change({
-                         source : function (query, process){
-                              return $.get( 'mostrarPacientes?name='+$(auto).val(),  function(data){console.log(data);
-                                  $(auto).typeahead({ source:data });
-                           });
-                     }
+
+                     var auto = $("#pacientes")
+                     $(auto).typeahead({source : function(query,process){
+                     return $.get('mostrarPacientes?name='+$(auto).val(), function(data){
+                              console.log(data);
+                                    return process(data);
+                        },'json');
+                     } });
+
+
+                     //example_collection.json
+                     //["item1","item2","item3"]
+
+
                      //    source: function(auto,process){
                      //          return $.post( 'mostrarPacientes?name='+$(auto).val(),  function  ( data )  {console.log(data);
                      //                return data;
                      //          });
                      //   }
-                  });
+
+//otro intento
+            //             $("#search").on("input", function(e) {
+      	// 	var val = $(this).val();
+      	// 	if(val === "") return;
+      	// 	//You could use this to limit results
+      	// 	//if(val.length < 3) return;
+            //
+      	// 	$.get('mostrarPacientes?name='+val, function(res) {
+      	// 		var dataList = $("#searchresults");
+      	// 		dataList.empty();
+            //
+      	// 		if(res.length) {
+      	// 			for(var i=0, len=res.length; i<len; i++) {
+      	// 				var opt = $("<options></options>").attr("value", res[i]);
+      	// 				dataList.append(opt);
+            //                         console.log(res[i],i);
+      	// 			}
+      	// 		}
+      	// 	},"json");
+      	// });
+
+
 
             });

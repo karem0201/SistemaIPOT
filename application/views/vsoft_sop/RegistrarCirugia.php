@@ -8,17 +8,20 @@
            <div class="col-lg-10 col-lg-offset-2 col-md-10 col-md-offset-1">
                  <?php echo form_open('cirugia/insertar'); ?>
                  <div class="row">
-
-                       <div class="row">
-                            <label for="skills">Skills: </label>
-                            <input  type="text" id="k"  name="name" data-provide="typeahead" class="col-md-3 form-control" data-items="4"  autocomplete="off">
-                            <br>
-                            <input type="text" class="col-md-3" data-provide="typeahead" data-items="4" data-source='["Almeria", "Granada", "Málaga", "Jaén", "Sevilla", "Córdoba", "Cádiz"]' >
+                       <div class="col-lg-4">
+                            <label for="paciente">Paciente: </label>
+                            <input  type="text" id="pacientes"  name="name" data-provide="" class="col-md-3 form-control" data-items="4"  autocomplete="off">
                       </div>
                       <div class="row">
-                            <input type="text" name="name" value="">
-                            <option value="">alabama</option>
-                            <option value="">gutierrez</option>
+                           <input type="text" name="search" id="search" placeholder="Type Something" list="searchresults" autocomplete="off" class="typeahead">
+                        	<datalist id="searchresults">
+                        		<option>Ray</option>
+                        		<option>Scott</option>
+                        		<option>Todd</option>
+                        		<option>Dave</option>
+                        		<option>Jeanne</option>
+                        		<option>Jacob</option>
+                        	</datalist>
 
                       </div>
               </div>

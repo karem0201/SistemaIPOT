@@ -2650,3 +2650,7 @@ shortcodes page css
       display: block;
 
 }
+
+.typeahead .dropdown-menu{
+      display: block;
+}

@@ -71,11 +71,22 @@ class Soft_sop extends CI_Controller
 
             $i=0;
             foreach ($q as $key ) {
-                  $array[$i]=$key->apMaterno.", ".$key->nombre;
+                  $array[$i]=$key->apPaterno."  ".$key->apMaterno.", ".$key->nombre;
                   $i++;
             }
+            if($q <>null)
+            {
+                 echo json_encode ($array);
+           }else{
+                 $i=0;
+                 $q= $this->mpaciente->mostrarByHHCC($searchTerm);
+                 foreach ($q as $key ) {
+                       $array[$i]=$key->apPaterno."  ".$key->apMaterno.", ".$key->nombre;
+                       $i++;
+                 }
+                  echo json_encode ($array);
+          }
 
-            echo json_encode ($array);
             //return json_encode ($q);
 
       }

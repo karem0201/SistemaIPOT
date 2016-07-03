@@ -25,7 +25,7 @@ class Mpaciente extends CI_Model
 
       public function mostrarNombres($search='')
       {
-            $this->db->select('p.nombre, p.apMaterno');
+            $this->db->select('p.nombre, p.apPaterno,p.apMaterno');
             $this->db->from('paciente p');
             $this->db->like('p.apPaterno',$search);
             $this->db->or_like('p.nombre',$search);
@@ -33,6 +33,16 @@ class Mpaciente extends CI_Model
             $q = $this->db->get();
             return $q->result();
       }
+
+      public function mostrarByHHCC($search='')
+      {
+            $this->db->select('p.nombre, p.apPaterno,p.apMaterno');
+            $this->db->from('paciente p');
+            $this->db->like('p.hhcc',$search);
+            $q = $this->db->get();
+            return $q->result();
+      }
+
 }
 
  ?>
