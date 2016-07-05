@@ -4,56 +4,49 @@
                   <div class="col-lg-10">
                        <h1></h1>
                  </div>
-           </div>
-           <div class="col-lg-10 col-lg-offset-2 col-md-10 col-md-offset-1">
+           </div> <!-- row -->
+           <div class="col-lg-10 col-lg-offset-0 col-md-4 col-md-offset-1 ">
                  <?php echo form_open('cirugia/insertar'); ?>
-                 <div class="row">
+                 <div class="row barra" >
                        <div class="col-lg-4">
                             <label for="paciente">Paciente: </label>
-                            <input  type="text" id="pacientes"  name="name" data-provide="" class="col-md-3 form-control" data-items="4"  autocomplete="off">
-                      </div>
-                      <div class="row">
-                           <input type="text" name="search" id="search" placeholder="Type Something" list="searchresults" autocomplete="off" class="typeahead">
-                        	<datalist id="searchresults">
-                        		<option>Ray</option>
-                        		<option>Scott</option>
-                        		<option>Todd</option>
-                        		<option>Dave</option>
-                        		<option>Jeanne</option>
-                        		<option>Jacob</option>
-                        	</datalist>
-
-                      </div>
-              </div>
-
-
-                       <div class="col-lg-1">
+                            <input  type="text" id="pacientes"  name="name" class=" form-control" data-items="4"  autocomplete="off">
+                      </div> <!-- col-lg-4 -->
+                      <div class="col-lg-3">
+                           <label for="hhcc">N° de historia: </label>
+                           <input  type="text"  name="hhcc" class=" form-control" data-items="4"  autocomplete="off">
+                    </div><!-- col-lg-3 -->
+                    <div class="col-lg-3">
+                         <label for="hhcc">Edad: </label>
+                         <input  type="text" name="edad" class=" form-control" data-items="4"  autocomplete="off">
+                  </div><!-- col-lg-3 -->
+                    <div class="col-lg-1">
+                          <label for="" style="color:rgba(175, 40, 189, 0)">""</label> <!-- artificio para alinear el boton -->
+                          <button type="button" class="btn btn-danger btn-block" data-toggle="modal" data-target="#nuevopaciente"><span class="fa fa-plus" ></span></button>
+                    </div><!-- col-lg-1 -->
+              </div> <!--row barra-->
+              <br>
+              <div class="row barra">
+                    <div class="col-lg-1">
                        <?php
                        $data=array('min'=>0,'max'=>10,'value'=>1);
                        echo form_input_number('Cant','cantidad',$data);
                        ?>
-                       </div>
-                       <div class="col-lg-4">
-
+                    </div>
+                    <div class="col-lg-4">
                              <div class="form-group">
-                             <label class = "name" for="">-</label>
-                             <br>
-                             <button type="button" class="btn btn-info" id="agregar" name="agregar" data-toggle="popover" data-trigger="focus" title="karem" data-content="And here's some amazing content. It's very engaging. Right?">agregar</button>
-
-                       </div>
-                 </div>
-                 <div class="row">
-
-                 </div>
-
-
-                   <div class="row">
-                      <div class="col-lg-10">
-                           <div class="panel panel-default">
-                              <div class="panel-heading">
+                                   <label class = "name" for="">-</label>
+                                   <br>
+                                   <button type="button" class="btn btn-info" id="agregar" name="agregar" data-toggle="popover" data-trigger="focus" title="karem" data-content="And here's some amazing content. It's very engaging. Right?">agregar</button>
+                             </div><!-- form-group -->
+                 </div><!--col-lg-4-->
+           </div><!--row barra-->
+           <div class="row">
+                 <div class="col-lg-10">
+                       <div class="panel panel-default">
+                             <div class="panel-heading">
                                    Striped Rows
-                              </div>
-                              <!-- /.panel-heading -->
+                              </div><!-- /.panel-heading -->
                               <div class="panel-body">
                                    <div class="table-responsive">
                                        <table class="table table-striped" id="grilla">
@@ -75,26 +68,20 @@
                                                  </tr>
                                              </tfoot>
                                        </table>
-                                   </div>
-                                   <!-- /.table-responsive -->
-                              </div>
-                              <!-- /.panel-body -->
-                           </div>
-                           <!-- /.panel -->
-                      </div>
-                      </div>
-                      <div class="col-lg-8">
-                           <button type="submit" class="btn btn-success" id="registrar" name="registrar" disabled >Registrar</button>
-                      </div>
-
-      </div>
-      <?php echo form_close(); ?>
+                                   </div><!-- /.table-responsive -->
+                              </div><!-- /.panel-body -->
+                           </div><!-- /.panel -->
+                     </div> <!-- col-lg-10 -->
+                </div><!--row -->
+                <div class="col-lg-8">
+                     <button type="submit" class="btn btn-success" id="registrar" name="registrar" disabled >Registrar</button>
+               </div><!-- col-lg-8 -->
+               <?php echo form_close(); ?>
+      </div> <!-- col-lq-10 -->
+</div><!--container -->
+</div> <!-- page-wraper-->
 
 
-</div>
-</div>
-</div>
-</section>
 
       <script type="text/javascript">
 

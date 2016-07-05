@@ -1,4 +1,4 @@
-<section class="bottom">
+
 <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
 <div class="container  " id ="navegador">
     <div class="navbar-header" >
@@ -221,5 +221,4 @@
         <!-- /.dropdown -->
     </ul>
     <!-- /.navbar-top-links -->
-</div>
-    
+</div> <!--id navegador-->

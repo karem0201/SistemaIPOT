@@ -1,5 +1,5 @@
 <div class="navbar-default sidebar" role="navigation">
-    <div class="sidebar-nav navbar-collapse">
+    <div class="sidebar-nav navbar-collapse" ">
         <ul class="nav" id="side-menu">
 
             <li>
@@ -134,8 +134,7 @@
                     <li>
                         <a href="login.html">Login Page</a>
                     </li>
-                </ul>
-                <!-- /.nav-second-level -->
+                </ul><!-- /.nav-second-level -->
             </li>
             <li>
                 <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
@@ -146,8 +145,7 @@
                     <li>
                         <a href="login.html">Login Page</a>
                     </li>
-                </ul>
-                <!-- /.nav-second-level -->
+                </ul><!-- /.nav-second-level -->
             </li>
             <li>
                <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
@@ -173,15 +171,11 @@
                           <li>
                               <a href="#">Third Level Item</a>
                           </li>
-                       </ul>
-                       <!-- /.nav-third-level -->
+                       </ul><!-- /.nav-third-level -->
                    </li>
-               </ul>
-               <!-- /.nav-second-level -->
+               </ul><!-- /.nav-second-level -->
            </li>
         </ul>
-    </div>
-    <!-- /.sidebar-collapse -->
-</div>
-<!-- /.navbar-static-side -->
+    </div><!-- /.sidebar-collapse -->
+</div><!-- /.navbar-static-side -->
 </nav>

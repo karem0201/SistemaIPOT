@@ -59,6 +59,7 @@ class Soft_sop extends CI_Controller
             $result = $this->mpaciente->mostrar();
             $data= array('paciente'=> $result, 'link'=>'cirugia/nuevo');
             $this->load->view('vsoft_sop/registrarCirugia', $data);
+            $this->load->view('vintranet/nuevoPaciente', $data);
             $this->load->view('vsoft_sop/footer');
 
       }
@@ -68,27 +69,8 @@ class Soft_sop extends CI_Controller
             $searchTerm = $this->input->get('name');
             $this->load->model(array('mpaciente'));
             $q= $this->mpaciente->mostrarNombres($searchTerm);
-
-            $i=0;
-            foreach ($q as $key ) {
-                  $array[$i]=$key->apPaterno."  ".$key->apMaterno.", ".$key->nombre;
-                  $i++;
-            }
-            if($q <>null)
-            {
-                 echo json_encode ($array);
-           }else{
-                 $i=0;
-                 $q= $this->mpaciente->mostrarByHHCC($searchTerm);
-                 foreach ($q as $key ) {
-                       $array[$i]=$key->apPaterno."  ".$key->apMaterno.", ".$key->nombre;
-                       $i++;
-                 }
-                  echo json_encode ($array);
-          }
-
+            echo json_encode($q);
             //return json_encode ($q);
-
       }
 }
 

@@ -31,7 +31,14 @@ class Mpaciente extends CI_Model
             $this->db->or_like('p.nombre',$search);
             $this->db->order_by('p.apPaterno','ASC');
             $q = $this->db->get();
-            return $q->result();
+
+            $i=0;
+            foreach ($q->result() as $key ) {
+                  $array[$i]=$key->apPaterno."  ".$key->apMaterno.", ".$key->nombre;
+                  $i++;
+            }
+
+            return $array;
       }
 
       public function mostrarByHHCC($search='')

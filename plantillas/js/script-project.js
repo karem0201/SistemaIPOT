@@ -117,6 +117,20 @@
       	// 	},"json");
       	// });
 
+//validacion hhcc and dni
+
+
+                  $("#duplicado").on("click"," #input-dup",function(){
+                        var content = $(this).find("input.form-control");
+                        var atrib = content.attr('name');
+                        $.get('validar'+atrib+'?atrib='+$(auto).val(), function(data){
+                                 console.log(data);
+                                       return process(data);
+                           },'json');
+                        alert(content.attr('name'));
+                  });
+
+
 
 
             });
