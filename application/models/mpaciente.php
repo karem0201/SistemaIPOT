@@ -4,6 +4,23 @@
  */
 class Mpaciente extends CI_Model
 {
+      public function insertar($new='')
+      { 
+            if ($new != null){
+            $datos = array(
+                  'nombre' =>$new['nombre'],
+                  'apPaterno'=>$new['apPaterno'],
+                  'apMaterno' =>$new['apMaterno'],
+                  'dni' => $new['dni'],
+                  'hhcc' => $new['hhcc'],
+                  'telefono' => $new['telefono'],
+                  'fecNac' => $new['fecNac'],
+                  'direccion' => $new['direccion'],
+                  'correo' => $new['correo']);
+                  $this->db->insert('paciente', $datos);
+                  return true;
+              }
+      }
 
       public function mostrar()
       {
@@ -11,9 +28,9 @@ class Mpaciente extends CI_Model
             return $q->result();
       }
 
-      public function getById($id='')
+      public function mostrarById($id='')
       {
-            $this->db->select('p.idPaciente, p.nombre , p.apPaterno, p.apMaterno, p.hhcc');
+            $this->db->select('*');
             $this->db->from('paciente p');
             $this->db->where('p.idPaciente',$id);
             $query = $this->db->get();
@@ -25,7 +42,7 @@ class Mpaciente extends CI_Model
 
       public function mostrarNombres($search='')
       {
-            $this->db->select('p.nombre, p.apPaterno,p.apMaterno');
+            $this->db->select('*');
             $this->db->from('paciente p');
             $this->db->like('p.apPaterno',$search);
             $this->db->or_like('p.nombre',$search);
@@ -34,21 +51,46 @@ class Mpaciente extends CI_Model
 
             $i=0;
             foreach ($q->result() as $key ) {
-                  $array[$i]=$key->apPaterno."  ".$key->apMaterno.", ".$key->nombre;
+                  $array[$i]=$key->apPaterno."  ".$key->apMaterno.", ".$key->nombre."-".$key->hhcc;
                   $i++;
             }
 
             return $array;
       }
 
-      public function mostrarByHHCC($search='')
+      public function validardni($search='')
       {
-            $this->db->select('p.nombre, p.apPaterno,p.apMaterno');
+            $this->db->select('p.nombre');
             $this->db->from('paciente p');
-            $this->db->like('p.hhcc',$search);
+            $this->db->where('p.dni',$search);
             $q = $this->db->get();
-            return $q->result();
+            if($q->num_rows()>0)
+            {
+                  return true;
+            }
+            else {
+                  return false;
+            }
       }
+
+      public function validarhhcc($search='')
+      {
+            $this->db->select('p.nombre');
+            $this->db->from('paciente p');
+            $this->db->where('p.hhcc',$search);
+            $q = $this->db->get();
+            if($q->num_rows()>0)
+            {
+                  return true;
+            }
+            else {
+                  return false;
+            }
+      }
+
+
+
+
 
 }
 

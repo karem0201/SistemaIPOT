@@ -1,66 +1,89 @@
 <div id="page-wrapper">
       <div class="container">
            <div class="row">
-                  <div class="col-lg-10">
+                  <div class="col-lg-8">
                        <h1></h1>
                  </div>
            </div> <!-- row -->
-           <div class="col-lg-10 col-lg-offset-0 col-md-4 col-md-offset-1 ">
+           <div class="col-lg-8 col-lg-offset-1 col-md-4 ">
                  <?php echo form_open('cirugia/insertar'); ?>
                  <div class="row barra" >
-                       <div class="col-lg-4">
-                            <label for="paciente">Paciente: </label>
-                            <input  type="text" id="pacientes"  name="name" class=" form-control" data-items="4"  autocomplete="off">
-                      </div> <!-- col-lg-4 -->
-                      <div class="col-lg-3">
-                           <label for="hhcc">N° de historia: </label>
-                           <input  type="text"  name="hhcc" class=" form-control" data-items="4"  autocomplete="off">
+                       <div class="col-lg-5">
+                            <select class="chosen form-control chosen-select" name ="paciente" id="s_pacientes" data-placeholder="Seleccione un paciente...">
+                                  <?php
+                                  $opt="<option value=''></option>";
+                                  foreach ($paciente as $key){
+                                        $opt .="<option value=".$key->idPaciente.">".$key->apPaterno." ".$key->apMaterno.", ".$key->nombre."</option>";
+                                  }
+                                  echo $opt;
+                                   ?>
+                            </select>
+                      </div> <!-- col-lg-5 -->
+                      <div class="col-lg-3 col-xs-3">
+                           <input  type="text"  name="hhcc" id="hhcc" class=" form-control input-sm" disabled="" placeholder="hhcc">
+                           <input  type="text"  name="id" id="idPact" style="display:none;">
                     </div><!-- col-lg-3 -->
-                    <div class="col-lg-3">
-                         <label for="hhcc">Edad: </label>
-                         <input  type="text" name="edad" class=" form-control" data-items="4"  autocomplete="off">
+                    <div class="col-lg-2 col-xs-3">
+                         <input  type="text" name="edad" id="edad" class=" form-control input-sm" data-items="4"  autocomplete="off" readonly="true" placeholder="Edad">
                   </div><!-- col-lg-3 -->
                     <div class="col-lg-1">
-                          <label for="" style="color:rgba(175, 40, 189, 0)">""</label> <!-- artificio para alinear el boton -->
-                          <button type="button" class="btn btn-danger btn-block" data-toggle="modal" data-target="#nuevopaciente"><span class="fa fa-plus" ></span></button>
+                          <button type="button" class="btn btn-danger btn-block" data-toggle="modal" data-target="#nuevopaciente"><span class="fa fa-user-plus" ></span></button>
                     </div><!-- col-lg-1 -->
               </div> <!--row barra-->
               <br>
               <div class="row barra">
-                    <div class="col-lg-1">
-                       <?php
-                       $data=array('min'=>0,'max'=>10,'value'=>1);
-                       echo form_input_number('Cant','cantidad',$data);
-                       ?>
+                    <div class="col-lg-4">
+                       <select class="form-control" id="idCategoria">
+                             <option value="0">Seleccione categoria...</option>
+                            <?php
+                               $opt='';
+                              foreach ($producto as $key ) {
+                                    $opt.="<option value=".$key->idTipoMat.">".$key->tipoMat."</option>";
+                                  }
+                                  echo $opt;
+                               ?>
+                       </select>
                     </div>
                     <div class="col-lg-4">
-                             <div class="form-group">
-                                   <label class = "name" for="">-</label>
-                                   <br>
-                                   <button type="button" class="btn btn-info" id="agregar" name="agregar" data-toggle="popover" data-trigger="focus" title="karem" data-content="And here's some amazing content. It's very engaging. Right?">agregar</button>
-                             </div><!-- form-group -->
+                       <select class="form-control" id="idMaterial">
+                             <option value="0">Seleccione material...</option>
+                       </select>
+                    </div>
+                    <div class="col-lg-2">
+                       <input type="text" class="form-control " id="cant" value="1">
+                    </div>
+                    <div class="col-lg-1">
+                          <button type="button" id="agregar" class="btn btn-danger btn-block" ><span class="fa fa-plus" ></span></button>
                  </div><!--col-lg-4-->
            </div><!--row barra-->
-           <div class="row">
-                 <div class="col-lg-10">
+           <br>
+           <div class="row barra " id="tabla-content">
+                 <div class="col-lg-15">
                        <div class="panel panel-default">
-                             <div class="panel-heading">
-                                   Striped Rows
-                              </div><!-- /.panel-heading -->
-                              <div class="panel-body">
-                                   <div class="table-responsive">
-                                       <table class="table table-striped" id="grilla">
+                              <div class="panel-body mitabla">
+                                   <div class="table-responsive " >
+                                       <table class="table table-striped " id="grilla">
                                            <thead>
                                                <tr>
                                                    <th>id</th>
-                                                   <th>Categoria</th>
                                                    <th>Material</th>
-                                                   <th>Cantidad</th>
-                                                   <th>Accion</th>
+                                                   <th >Cant.</th>
+                                                   <th></th>
                                                </tr>
                                            </thead>
                                            <tbody >
-
+                                                 <tr>
+                                                    <td>2</td>
+                                                    <td>hoja shaver 5.0 mm</td>
+                                                    <td >1</td>
+                                                    <td>x</td>
+                                                </tr>
+                                                <tr>
+                                                   <td>3</td>
+                                                   <td>Punta de radiofrecuencia</td>
+                                                   <td >1</td>
+                                                   <td>x</td>
+                                               </tr>
                                            </tbody>
                                            <tfoot>
                                                <tr>
@@ -73,8 +96,9 @@
                            </div><!-- /.panel -->
                      </div> <!-- col-lg-10 -->
                 </div><!--row -->
-                <div class="col-lg-8">
-                     <button type="submit" class="btn btn-success" id="registrar" name="registrar" disabled >Registrar</button>
+                <div class="col-lg-8 desactive"  id="registrar">
+                      <br>
+                     <button type="submit" class="btn btn-success"  name="registrar" >Registrar</button>
                </div><!-- col-lg-8 -->
                <?php echo form_close(); ?>
       </div> <!-- col-lq-10 -->
@@ -101,6 +125,44 @@
 
 
                });
+
+               var paciente  = $("#s_pacientes");
+               var hhcc = $("#hhcc");
+               var edad = $("#edad");
+               var idPact= $("#idPact");
+               var d = new Date();
+
+               paciente.change(function(e) {
+                    var value = $(this).val();
+                    var id = $(this).attr('id');
+                    var request;
+                    if(request==true){
+                      request.abort();
+                    }
+                  request = $.ajax({
+                    url:"<?php  echo base_url('paciente/mostrarById')?>",
+                    type:"Post",
+                     dataType: "json",
+                    data:"postname=" + value +"&id=" +id
+                  });
+
+                  request.done(function (response,textStatus,jqXHR) {
+                    hhcc.val(response.hhcc);
+                    edad.val(response.fecNac);
+                    idPact.val(response.idPaciente);
+                  });
+                  request.fail(function (jqXHR,textStatus,thrown) {
+                    console.log("Erros :" + textStatus);
+                  });
+
+                  request.always(function () {
+                    console.log("termino la ejecucion de ajax");
+                  });
+
+                  e.preventDefault();
+                });
+
+
                });
 
 

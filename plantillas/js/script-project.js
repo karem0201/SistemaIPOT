@@ -11,14 +11,16 @@
                               return cantidad;
       			};
 
+                  var cant = $("#cant");
+                  var idMaterial = $("#idMaterial");
                   $("#agregar").click(function fn_agregar(){
+
                         if($("#idMaterial").val() !=0){
-                              $('#agregar').removeAttr("title");
+                              if(cant.val()>0){
                             cadena = "<tr>";
-                            cadena = cadena + "<td>" + $("#idMaterial").val() + "</td>";
-                            cadena = cadena + "<td>" + $("#idCategoria option:selected").text() + "</td>";
+                            cadena = cadena + "<td>" + idMaterial.val() + "</td>";
                             cadena = cadena + "<td>" + $("#idMaterial option:selected").text() + "</td>";
-                            cadena = cadena + "<td>" + $("#Cant").val() + "</td>";
+                            cadena = cadena + "<td>" + cant.val() + "</td>";
                             cadena = cadena + "<td><a class='elimina fa fa-times-circle'></a></td>";
                             $("#grilla tbody").append(cadena);
                             /*
@@ -30,8 +32,9 @@
             				cantidad = fn_cantidad();
 
                                     var $registrar = $('#registrar');
+                                    var $table = $('#tabla-content');
                                     if(cantidad > 0){
-                                          $registrar.removeAttr('disabled','disabled');
+                                          $registrar.add($table).removeClass('desactive');
                                     }
                               }else{
                                     // $(this).attr({
@@ -40,7 +43,7 @@
                                     //   title:"karem", 'data-content':"And here's some amazing content. It's very engaging. Right?"
 
                               //   });
-                              }
+                        }}
                 });
 
                   function fn_dar_eliminar(){
@@ -57,7 +60,7 @@
 
                                   if (cantidad==0)
                                   {
-                                        $registrar.attr('disabled','disabled');
+                                        $registrar.add($table).addClass('desactive');
                                   }
                               })
 
@@ -76,15 +79,14 @@
  //               }
  // });
 
-
-                     var auto = $("#pacientes")
-                     $(auto).typeahead({source : function(query,process){
-                     return $.get('mostrarPacientes?name='+$(auto).val(), function(data){
-                              console.log(data);
-                                    return process(data);
-                        },'json');
-                     } });
-
+                     //
+                  //    var auto = $("#paciente")
+                  //    $(auto).typeahead({source : function(query,process){
+                  //    return $.get('mostrarPacientes?name='+$(auto).val(), function(data){
+                  //             console.log(data);
+                  //                   return process(data);
+                  //       },'json');
+                  //    } });
 
                      //example_collection.json
                      //["item1","item2","item3"]
@@ -97,38 +99,63 @@
                      //   }
 
 //otro intento
-            //             $("#search").on("input", function(e) {
-      	// 	var val = $(this).val();
-      	// 	if(val === "") return;
-      	// 	//You could use this to limit results
-      	// 	//if(val.length < 3) return;
-            //
-      	// 	$.get('mostrarPacientes?name='+val, function(res) {
-      	// 		var dataList = $("#searchresults");
-      	// 		dataList.empty();
-            //
-      	// 		if(res.length) {
-      	// 			for(var i=0, len=res.length; i<len; i++) {
-      	// 				var opt = $("<options></options>").attr("value", res[i]);
-      	// 				dataList.append(opt);
-            //                         console.log(res[i],i);
-      	// 			}
-      	// 		}
-      	// 	},"json");
-      	// });
+                  $("#pacientes").on("input", function(e) {
+
+      		var val = $(this).val();
+      		          if(val === "") return;
+      		//You could use this to limit results
+      		//if(val.length < 3) return;
+
+      		$.get('mostrarPacientes?name='+val, function(res) {
+      			var dataList = $("#searchresults");
+      			dataList.empty();
+
+      			if(res.length) {
+      				for(var i=0, len=res.length; i<len; i++) {
+      					var opt = "<option >"+res[i]+"</option>";
+      					dataList.append(opt);
+                                    console.log(res[i],i);
+      				}
+      			}
+      		},"json");
+      	});
+
+            // $("#pacientes").on("change",function(){
+            //       alert($(this).val());
+            // });
+
+$(".chosen-select").chosen();
+
+
+
+
+
 
 //validacion hhcc and dni
 
 
-                  $("#duplicado").on("click"," #input-dup",function(){
+                  $("#duplicado").on("change"," #input-dup",function(){
+                        var label = $(this).siblings('label');
                         var content = $(this).find("input.form-control");
                         var atrib = content.attr('name');
-                        $.get('validar'+atrib+'?atrib='+$(auto).val(), function(data){
+                        var button = $("#regPac");
+
+                        $.get('validar'+atrib+'?atrib='+$(content).val(), function(data){
                                  console.log(data);
-                                       return process(data);
+                                          if(data){
+                                                label.addClass("duplicate-true");
+                                                button.attr('disabled','disabled');
+                                          }
+                                          else{
+                                                label.removeClass("duplicate-true");
+                                                button.removeAttr('disabled','disabled');
+                                          }
                            },'json');
-                        alert(content.attr('name'));
+
                   });
+
+//cambio del select chose
+
 
 
 

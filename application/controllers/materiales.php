@@ -21,7 +21,7 @@ class Materiales extends CI_Controller
                 }
             }
         else {
-            echo '<option value="0">seleccione</option>';
+            echo '<option value="0">Seleccione material...</option>';
             }
 
       }

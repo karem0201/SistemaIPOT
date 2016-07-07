@@ -1,5 +1,3 @@
-
-
    <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
@@ -33,7 +31,7 @@
                                                <tr class="even gradeC">
                                                <td><?= $key->apPaterno." ". $key->apMaterno?> </td>
                                                <td><?= $key->nombre?></td>
-                                               <td class="center"><?= $key->diaNac . "/".$key->mesNac. "/". $key->anioNac?></td>
+                                               <td class="center"><?= $key->fecNac?></td>
                                                <td class="center"><a href='<?= base_url() ?>cirugia/index/<?= $key->idCirugia?>'  class='btn btn-info btn-xs'><?php
                                                if($key->fecReal==0){echo "Pendiente"; }else{ echo "Culminada";} ?></a> </td>
                                             </tr>

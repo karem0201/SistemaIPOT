@@ -13,7 +13,7 @@
                                     <img class="img-responsive" src="<?= base_url()?>plantillas/images/menu/<?= $key->nombPermiso?>.png" alt="">
                                     <div class="overlay">
                                         <div class="recent-work-inner">
-                                           <h3><a href="<?= $key->nombPermiso?>"><?= $key->desPermiso?></a> </h3>
+                                           <h3><a href="<?= base_url(). $key->nombPermiso?>"><?= $key->desPermiso?></a> </h3>
                                            <p></p>
                                            <a class="preview" href="<?= $key->nombPermiso?>" ><i class="fa fa-desktop"></i> Ingresar</a>
                                         </div>

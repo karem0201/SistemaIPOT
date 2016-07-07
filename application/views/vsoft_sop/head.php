@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,15 +25,15 @@
 <!-- MetisMenu CSS -->
 <link href="<?=base_url()?>plantillas/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
-<!-- DataTables CSS -->
-<link href="<?=base_url()?>plantillas/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
+
+<link href="<?=base_url()?>plantillas/css/chosen.css" rel="stylesheet">
 
 <!-- DataTables Responsive CSS -->
 <!-- <link href="<?=base_url()?>plantillas/bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet"> -->
 
 
 <!-- jQuery -->
-<script src="<?=base_url()?>plantillas/bower_components/jquery/dist/jquery.min.js"></script>
+
 <script src="<?=base_url()?>plantillas/js/jquery.js"></script>
 
 <!-- Metis Menu Plugin JavaScript -->
@@ -51,8 +51,14 @@
 <!-- Custom Theme JavaScript -->
 <script src="<?=base_url()?>plantillas/dist/js/sb-admin-2.js"></script>
 
-<!--  -->
-<script src="<?=base_url()?>plantillas/js/script-project.js"></script>
+
 
 <!--  autocompletar compatible con bootstrap 3-->
-<script src="<?=base_url()?>plantillas/js/typeahead.js"></script>
+
+
+<script src="<?=base_url()?>plantillas/js/chosen.jquery.js"></script>
+
+
+<!--  -->
+<script src="<?=base_url()?>plantillas/js/script-project.js"></script>
+</head>

@@ -8,23 +8,7 @@
             </div>
             <div class="col-lg-10 col-lg-offset-2 col-md-10 col-md-offset-1">
                   <?php echo form_open('cirugia/insertar'); ?>
-                  <div class="row">
-                       <div class="col-lg-4"><?php
-                       $atrib=array('readonly'=>'readonly');
-                         echo
-                          form_input_value('paciente','Paciente',$atrib,$paciente->apPaterno." ".$paciente->apMaterno.", ".$paciente->nombre);
-                          $attr=array('style'=>'display:none', 'value'=>$paciente->idPaciente);
-                          form_input_text('idPaciente','',$attr);
 
-                          $attr=array('style'=>'display:none');
-                          form_input_text('idListaMat','',$attr);
-                          ?>
-                        </div>
-                        <div class="col-lg-3"><?php
-                              echo form_input_value('hhcc','Historia Clinica',$atrib,$paciente->hhcc);
-                             ?>
-                        </div>
-                  </div>
                   <div class="row">
                          <div class="col-lg-3"> <label for="">Categoria</label>
                          <?php

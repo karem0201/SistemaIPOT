@@ -28,6 +28,7 @@ class Soft_sop extends CI_Controller
 
       }
 
+
       public function index()
       {
             $this->load->view('vsoft_sop/head');
@@ -57,12 +58,15 @@ class Soft_sop extends CI_Controller
             $this->load->view('vsoft_sop/navEstatico',$data);
             $this->load->model(array('mpaciente'));
             $result = $this->mpaciente->mostrar();
-            $data= array('paciente'=> $result, 'link'=>'cirugia/nuevo');
+            $this->load->model(array('mproductos'));
+            $productos = $this->mproductos->mostrar();
+            $data=array('paciente'=> $result,'producto'=>$productos);
             $this->load->view('vsoft_sop/registrarCirugia', $data);
             $this->load->view('vintranet/nuevoPaciente', $data);
             $this->load->view('vsoft_sop/footer');
-
       }
+
+
 
       public function mostrarPacientes()
       {
@@ -71,6 +75,22 @@ class Soft_sop extends CI_Controller
             $q= $this->mpaciente->mostrarNombres($searchTerm);
             echo json_encode($q);
             //return json_encode ($q);
+      }
+
+      public function validardni()
+      {
+            $searchTerm = $this->input->get('atrib');
+            $this->load->model(array('mpaciente'));
+            $q= $this->mpaciente->validarDni($searchTerm);
+            echo json_encode($q);
+      }
+
+      public function validarhhcc()
+      {
+            $searchTerm = $this->input->get('atrib');
+            $this->load->model(array('mpaciente'));
+            $q= $this->mpaciente->validarhhcc($searchTerm);
+            echo json_encode($q);
       }
 }
 

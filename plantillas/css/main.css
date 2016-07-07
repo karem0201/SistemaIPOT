@@ -4,9 +4,7 @@
 /*************************
 *******Typography******
 **************************/
-*{
-      box-sizing: :border-box;
-}
+
 body {
   background: #fff;
   font-family: 'Open Sans', sans-serif;
@@ -2645,12 +2643,12 @@ shortcodes page css
   display: inline-block;
   margin-left: 15px;
 }
+
 /***********************
 ********* Adicionales ******
 ************************/
-.active{
-      display: block;
-
+.desactive{
+display: none;
 }
 
 .barra{
@@ -2669,10 +2667,21 @@ shortcodes page css
       margin-bottom: 2px;
       font-size: 12px;
       font-weight:bolder;
-      color: #03a9f4;
+      color: rgba(3, 169, 244, 0);
 
 }
 
 .duplicate-true{
       color: #f10505;
+}
+.mitabla{
+background: #a3b2b9;
+}
+
+.mitabla tbody tr{
+background: #c8ebef;
+}
+.mitabla thead{
+      background: #0d1023;
+      color: #ffffff;
 }
