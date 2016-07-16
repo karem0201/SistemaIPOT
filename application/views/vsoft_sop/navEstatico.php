@@ -1,15 +1,15 @@
-<div class="navbar-default sidebar" role="navigation">
+<div class="navbar-default sidebar" >
     <div class="sidebar-nav navbar-collapse">
         <ul class="nav" id="side-menu">
 
             <li>
-                <a href="index.html"><i class="fa fa-th-large fa-fw"></i> Inicio</a>
+                <a href="<?= base_url()?>soft_sop"><i class="fa fa-th-large fa-fw"></i> Inicio</a>
             </li>
            <?php if($this->session->userdata('login')){
                  $result = $permiso;
                  foreach ($result as $key){  ?>
                        <li >
-                             <a href="">
+                             <a href="#">
                        <?php
                        if($key->nombPermiso=="soft_sop"){?>
                              <i class="fa fa-medkit fa-fw"></i><?= $key->desPermiso?><span class="fa arrow"></span></a>

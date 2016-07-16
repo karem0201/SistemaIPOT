@@ -31,15 +31,19 @@ class Cirugia extends CI_Controller
 
       public function index($id='')
       {if($id <> null){
-            $this->load->model('mcirugia');
-            $fila =$this->mcirugia->getCirugiaById($id);
+
             $this->load->view("vsoft_sop/head");
-            $this->load->view("vsoft_sop/header");
+            $this->load->view("guest/header");
+            $this->load->model(array('muser'));
+            $idUsu =$this->session->userdata('idTipUsu');
+            $result=$this->muser->getPermisos($idUsu);
+            $data=array('permiso'=>$result);
             $this->load->view('vsoft_sop/notificaciones',$data);
             $this->load->view('vsoft_sop/navEstatico',$data);
             // print_r($fila);
             $this->load->helper('date');
-
+            $this->load->model('mcirugia');
+            $fila =$this->mcirugia->getCirugiaById($id);
             $atrib = $this->mcirugia->getAtributosByCir($id);
             $data=array('result'=>$fila , 'atributo'=>$atrib);
             $this->load->view("vsoft_sop/cirugia",$data);
@@ -50,23 +54,14 @@ class Cirugia extends CI_Controller
             }
       }
 
-      public function nuevo($id='')
+      public function registrar()
       {
-            $this->load->view('vsoft_sop/head');
-            $this->load->view('vsoft_sop/header');
-            $this->load->model(array('muser'));
-            $id =$this->session->userdata('idTipUsu');
-            $result=$this->muser->getPermisos($id);
-            $data=array('permiso'=>$result);
-            $this->load->view('vsoft_sop/notificaciones',$data);
-            $this->load->view('vsoft_sop/navEstatico',$data);
-            $this->load->model(array('mpaciente'));
-            $result = $this->mpaciente->getById($id);
-            $this->load->model(array('mproductos'));
-            $categoria = $this->mproductos->get();
-            $data= array('paciente'=> $result, 'producto'=>$categoria);
-            $this->load->view('vsoft_sop/reg_cirugia', $data);
-            $this->load->view('vsoft_sop/footer');
+            $datos = $this->input->post();
+            $this->load->model(array('mcirugia'));
+            $q=$this->mcirugia->insertar($datos);
+            // if($q){
+            //       header("Location: " . base_url(). "intranet");
+            // }
       }
 
 }

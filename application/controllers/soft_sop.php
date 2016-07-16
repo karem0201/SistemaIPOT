@@ -32,7 +32,7 @@ class Soft_sop extends CI_Controller
       public function index()
       {
             $this->load->view('vsoft_sop/head');
-            $this->load->view('vsoft_sop/header');
+            $this->load->view('guest/header');
             $this->load->model(array('muser'));
             $id =$this->session->userdata('idTipUsu');
             $result=$this->muser->getPermisos($id);
@@ -49,7 +49,7 @@ class Soft_sop extends CI_Controller
       public function nuevo()
       {
             $this->load->view('vsoft_sop/head');
-            $this->load->view('vsoft_sop/header');
+            $this->load->view('guest/header');
             $this->load->model(array('muser'));
             $id =$this->session->userdata('idTipUsu');
             $result=$this->muser->getPermisos($id);
@@ -60,7 +60,9 @@ class Soft_sop extends CI_Controller
             $result = $this->mpaciente->mostrar();
             $this->load->model(array('mproductos'));
             $productos = $this->mproductos->mostrar();
-            $data=array('paciente'=> $result,'producto'=>$productos);
+            $this->load->model(array('mprocedimiento'));
+            $proc = $this->mprocedimiento->mostrar();
+            $data=array('paciente'=> $result,'producto'=>$productos,'procedimiento'=>$proc);
             $this->load->view('vsoft_sop/registrarCirugia', $data);
             $this->load->view('vintranet/nuevoPaciente', $data);
             $this->load->view('vsoft_sop/footer');

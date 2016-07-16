@@ -6,7 +6,7 @@
 **************************/
 
 body {
-  background: #fff;
+  background: #ffffff;
   font-family: 'Open Sans', sans-serif;
   color:#4e4e4e;
   line-height: 22px;
@@ -183,18 +183,21 @@ font-size: 20px;
 }
 
 .navbar>.container .navbar-brand{
-  margin-left: 0;
+  padding: 0px;
+  
 }
 
 .top-bar {
   padding: 10px 0;
-  background: #191919;
+  /*background: #191919;*/
+  background: #cddc39;
   border-bottom: 1px solid #222;
   line-height: 28px;
 }
 
 .top-number{
-  color: #fff;
+  color: #e91e63;
+  font-weight: bolder;
 }
 
 .top-number p{
@@ -219,7 +222,7 @@ ul.social-share li {
 ul.social-share li a {
   display: inline-block;
   color: #fff;
-  background: #404040;
+  background: #3f51b5;
   width: 25px;
   height: 25px;
   line-height: 25px;
@@ -233,7 +236,7 @@ ul.social-share li a:hover {
 }
 
 .search i {
-  color: #fff;
+  color: #e91e63;
 }
 
 input.search-form{
@@ -241,7 +244,7 @@ input.search-form{
   border: 0 none;
   width: 60px;
   padding: 0 10px;
-  color: #FFF;
+  color: black;
   -webkit-transition: all 400ms;
   -moz-transition: all 400ms;
   -ms-transition: all 400ms;
@@ -255,6 +258,7 @@ input.search-form::-webkit-input-placeholder{
 
 input.search-form:hover::-webkit-input-placeholder {
   color: #fff;
+  font-weight:bolder;
 }
 
 input.search-form:hover {
@@ -269,7 +273,7 @@ input.search-form:hover {
 .navbar {
   border-radius: 0;
   margin-bottom: 0;
-  background: #151515;
+  background: #050b2d;
   padding: 15px 0;
   padding-bottom: 0;
 }
@@ -396,7 +400,7 @@ input.search-form:hover {
 
 #main-slider .carousel .btn-slide {
   padding: 8px 20px;
-  background: #c52d2f;
+  background: #2196f3;
   color: #fff;
   border-radius: 4px;
   margin-top: 25px;
@@ -444,7 +448,7 @@ input.search-form:hover {
 #main-slider .next {
   position: absolute;
   top: 50%;
-  background-color: #c52d2f;
+  background-color: #327982;
   color: #fff;
   display: inline-block;
   margin-top: -25px;
@@ -567,11 +571,11 @@ input.search-form:hover {
 
 .feature-wrap i{
   font-size: 48px;
-  height: 110px;
+  height: 150px;
   width: 110px;
   margin: 3px;
-  border-radius: 100%;
-  line-height: 110px;
+  border-radius: 20%;
+  line-height: 150px;
   text-align:center;
   background: #ffffff;
   color: #c52d2f;
@@ -595,14 +599,7 @@ input.search-form:hover {
 }
 
 /*en caso de estar desactivado*/
-.feature-wrap.modelo-0 i{
-  font-size: 48px;
-  height: 110px;
-  width: 110px;
-  margin: 3px;
-  border-radius: 100%;
-  line-height: 110px;
-  text-align:center;
+.feature-wrap .modelo-0 i{
   background: #ffffff;
   color: #c52d2f;
   border: 3px solid #ffffff;
@@ -626,13 +623,6 @@ input.search-form:hover {
 
 /*en caso de estar activado*/
 .feature-wrap.modelo-1 i{
-  font-size: 48px;
-  height: 110px;
-  width: 110px;
-  margin: 3px;
-  border-radius: 100%;
-  line-height: 110px;
-  text-align:center;
   background: #ffffff;
   color: #377d39;
   border: 3px solid #ffffff;
@@ -2649,6 +2639,7 @@ shortcodes page css
 ************************/
 .desactive{
 display: none;
+
 }
 
 .barra{
@@ -2656,6 +2647,10 @@ display: none;
       color:  black;
       padding: 15px;
 }
+.barra input, select, .chosen-container{
+      margin-bottom: 10px;
+}
+
 .input-modal{
       background:#04044c;
       color:#ffffff;
@@ -2675,7 +2670,7 @@ display: none;
       color: #f10505;
 }
 .mitabla{
-background: #a3b2b9;
+background: rgba(163, 178, 185, 0.6);
 }
 
 .mitabla tbody tr{
@@ -2685,3 +2680,34 @@ background: #c8ebef;
       background: #0d1023;
       color: #ffffff;
 }
+.elimina{
+      font-size: 20px;
+}
+.prueba {
+      border: 2px red solid;
+}
+
+.row-md{
+      background:#0d1023;
+      color:#e7ecef;
+      border:solid red 2px;
+      padding: 5px 9px;
+      font-size: 16px;
+      margin-bottom: 10px;
+}
+
+.row-md h2{
+      color:#e7ecef;
+      text-align: center;
+}
+
+.logo{
+  padding:0;
+  margin:0;
+  font-size: 14pt;
+  font-style: italic;
+  font-family: monospace;
+}
+/************************
+********* Pdf pagina ******
+*************************/

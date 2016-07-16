@@ -29,8 +29,8 @@ class Muser extends CI_Model
         $this->db->where('t.idTipoUsuario',$idTipo );
         $query = $this->db->get();
         if($query->num_rows() > 0 )
-        {
-             return $query->result();
+        {return ($query->result());
+
         }
 
   }

@@ -7,7 +7,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html"><img src="<?=base_url()?>/plantillas/images/logo.png" alt="logo"></a>
+            <a class="navbar-brand" href="index.html"><img src="<?=base_url()?>/plantillas/images/logoEscrito.png" alt="logo"></a>
+            <!-- <a class="navbar-brand" href="index.html"><div class="logo"style="background-color:red; width:70px; height:70px;">Instituo Peruano de <br>Ortopedia y Traumatologia</div></a> -->
         </div>
 
         <div class="collapse navbar-collapse navbar-right">

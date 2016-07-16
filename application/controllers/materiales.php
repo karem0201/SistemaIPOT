@@ -7,21 +7,20 @@ class Materiales extends CI_Controller
 
 
 
-      public function fillMateriales()
+      public function mostrar()
       {
             $id = $this->input->post('idCategoria');
 
             if($id){
                   $this->load->model('mproductos');
                   $materiales = $this->mproductos->getMateriales($id);
-
-
-                  foreach($materiales as $fila){
-                      echo '<option value="'. $fila->idMaterial .'">'. $fila->nombreMat ."- ".$fila->medidaMat .'</option>';
-                }
+                  echo json_encode($materiales);
+                  // foreach($materiales as $fila){
+                  //     echo '<li class="active-result" data-option-array-index='. $fila->idMaterial .'>'. $fila->nombre ."- ".$fila->medida .'</li>';
+                //}
             }
         else {
-            echo '<option value="0">Seleccione material...</option>';
+            echo json_encode('-');
             }
 
       }

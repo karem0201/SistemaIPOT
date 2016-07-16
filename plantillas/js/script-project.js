@@ -2,14 +2,16 @@
 
             $(document).ready(function(){
                    var $registrar = $('#registrar');
+                   var $table = $('#tabla-content');
+                   var grilla = $("#grilla tbody");
                    var $listaMat;
-				fn_cantidad();
 
-                        function fn_cantidad(){
-      				cantidad = $("#grilla tbody").find("tr").length;
-      				$("#span_cantidad").html(cantidad);
-                              return cantidad;
-      			};
+
+                  function fn_cantidad(){
+				cantidad = grilla.find("tr").length;
+				$("#span_cantidad").html(cantidad);
+                        return cantidad;
+			};
 
                   var cant = $("#cant");
                   var idMaterial = $("#idMaterial");
@@ -21,8 +23,8 @@
                             cadena = cadena + "<td>" + idMaterial.val() + "</td>";
                             cadena = cadena + "<td>" + $("#idMaterial option:selected").text() + "</td>";
                             cadena = cadena + "<td>" + cant.val() + "</td>";
-                            cadena = cadena + "<td><a class='elimina fa fa-times-circle'></a></td>";
-                            $("#grilla tbody").append(cadena);
+                            cadena = cadena + "<td><a class='elimina fa fa-trash'></a></td>";
+                            grilla.append(cadena);
                             /*
                                 aqui puedes enviar un conunto de tados ajax para agregar al usuairo
                                 $.post("agregar.php", {ide_usu: $("#valor_ide").val(), nom_usu: $("#valor_uno").val()});
@@ -32,10 +34,12 @@
             				cantidad = fn_cantidad();
 
                                     var $registrar = $('#registrar');
-                                    var $table = $('#tabla-content');
-                                    if(cantidad > 0){
+
+                                    if(cantidad === 1){
                                           $registrar.add($table).removeClass('desactive');
+                                          $registrar.removeAttr("disabled");
                                     }
+                                    fn_llenarArray();
                               }else{
                                     // $(this).attr({
                                     //   'data-toggle':"popover",
@@ -57,7 +61,7 @@
                                       aqui puedes enviar un conjunto de datos por ajax
                                       $.post("eliminar.php", {ide_usu: id})
                                   */
-
+                                  fn_llenarArray();
                                   if (cantidad==0)
                                   {
                                         $registrar.add($table).addClass('desactive');
@@ -68,6 +72,20 @@
                       });
                   };
 
+                  function fn_llenarArray(){
+                        var tr =grilla.children('tr');
+                        var ids = new Array();
+                        var cants = new Array();
+                        var idMat[];
+                        var idCant[];
+                        tr.each(function(index){
+                              ids[index]=tr.eq(index).find("td").eq(0).text();
+                              cants[index]=tr.eq(index).find("td").eq(2).text();
+                        });
+                        $("#arrayMat").attr('value',JSON.stringify(idCant.push(ids)));
+                        console.log(JSON.stringify(ids));
+                        $("#arrayCant").attr('value',cants);
+                  };
 
 //pruebas para realizar typeahead
  //                  var auto = $("#pacientes")
@@ -99,35 +117,15 @@
                      //   }
 
 //otro intento
-                  $("#pacientes").on("input", function(e) {
 
-      		var val = $(this).val();
-      		          if(val === "") return;
-      		//You could use this to limit results
-      		//if(val.length < 3) return;
-
-      		$.get('mostrarPacientes?name='+val, function(res) {
-      			var dataList = $("#searchresults");
-      			dataList.empty();
-
-      			if(res.length) {
-      				for(var i=0, len=res.length; i<len; i++) {
-      					var opt = "<option >"+res[i]+"</option>";
-      					dataList.append(opt);
-                                    console.log(res[i],i);
-      				}
-      			}
-      		},"json");
-      	});
 
             // $("#pacientes").on("change",function(){
             //       alert($(this).val());
             // });
 
+//mejor busqueda con chosen
 $(".chosen-select").chosen();
-
-
-
+$(".chosen-select-multiple").chosen({max_selected_options: 3});
 
 
 
