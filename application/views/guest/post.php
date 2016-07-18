@@ -1,20 +1,21 @@
 <!-- publicacion de post -->
 <!--about us-->
-<section class="aboutus" id="aboutus">
+<section class="aboutus" id="post">
 <div class="container">
   <div class="center wow fadeInDown">
+    <div class="linear-re ">
+        <h2>Blogs Médicos</h2>
+    </div>
 
-    <h2>About Leroy</h2>
-
-    <h3>Have you ever felt worried that your party will not raise up to your guest expectations? In design, vertical rhythm is the structure that guides a reader's eye through the content. Good vertical rhythm makes a layout more balanced and beautiful and its content more readable. The time signature in sheet music visually depicts a song's rhythm, while for us, the lines of the baselmnbine grid depict the rhythm of our content and give us guidelines.</h3>
+    <h3></h3>
   </div>
   <div class="row">
   <?php
   foreach ($consulta as $fila) {
 
    ?>
-         <div class="col-md-6">
-           <div class="papers text-center">
+         <section class="col-md-6">
+           <div class="papers text-center" >
              <img src="<?= base_url()?>public/imagenes/<?= $fila->imagen ?>" alt=""><br/>
              <a href="#"><b>Download my resume</b></a>
              <h4 class="notopmarg nobotmarg"><?= $fila->nombreAb?></h4>
@@ -22,12 +23,41 @@
                <?= $fila->contenido?>
              </p>
            </div>
-         </div>
+         </section>
    <?php
   }
    ?>
-   <?php echo $pagination ?>
+
+  <?php echo $pagination ?>
   </div>
 </div>
 </section>
 <br>
+<script type="text/javascript">
+  $("#pagination").on("click","li",function(){
+    var i=$(this);
+    var request;
+    alert(i.text());
+    if(request==true){
+      request.abort();
+    }
+    request = $.ajax({
+    url:"<?php  echo base_url('materiales/mostrar')?>",
+    type:"Post",
+     dataType: "json",
+    data:"idCategoria=" +idCategoria
+    });
+
+    request.done(function (response,textStatus,jqXHR) {
+          opt="";li="";
+          for(var i=0, len=response.length; i<len; i++) {
+               var opt = opt + "<option value="+response[i].idMaterial+">"+ response[i].nombre+" "+response[i].medida+"</option>";
+          }
+        $("#idMaterial").html(opt);
+    });
+    request.fail(function (jqXHR,textStatus,thrown) {
+          console.log("Erros :" + textStatus);
+    });
+
+  });
+</script>

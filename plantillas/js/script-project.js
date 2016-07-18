@@ -152,8 +152,11 @@ $(".chosen-select-multiple").chosen({max_selected_options: 3});
 
                   });
 
-//cambio del select chose
+//pagination guest
 
+$(".pagination").on("click", function(){
+  alert("karem");
+});
 
 
 

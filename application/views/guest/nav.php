@@ -7,12 +7,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html"><img src="<?=base_url()?>/plantillas/images/logoEscrito.png" alt="logo"></a>
+            <a class="navbar-brand" href="index.html"><img src="<?=base_url()?>/plantillas/images/logoPage.png" alt="logo"></a>
             <!-- <a class="navbar-brand" href="index.html"><div class="logo"style="background-color:red; width:70px; height:70px;">Instituo Peruano de <br>Ortopedia y Traumatologia</div></a> -->
         </div>
 
-        <div class="collapse navbar-collapse navbar-right">
-            <ul class="nav navbar-nav">
+        <div class="collapse navbar-collapse navbar-right" >
+            <ul class="nav navbar-nav" >
                 <li class="active"><a href="index.html">Inicio</a></li>
                 <li><a href="about-us.html">Acerca de Nosotros</a></li>
                 <li><a href="services.html">Servicios</a></li>

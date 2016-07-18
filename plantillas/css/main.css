@@ -183,8 +183,9 @@ font-size: 20px;
 }
 
 .navbar>.container .navbar-brand{
-  padding: 0px;
-  
+  padding: 5px;
+  padding-left: 50px;
+
 }
 
 .top-bar {
@@ -273,13 +274,14 @@ input.search-form:hover {
 .navbar {
   border-radius: 0;
   margin-bottom: 0;
-  background: #050b2d;
+  background: #1d034c;
   padding: 15px 0;
   padding-bottom: 0;
 }
 
  .navbar-nav{
-  margin-top: 12px;
+  margin-top: 0px;
+  padding-top:30px;
  }
 
 .navbar-nav>li{
@@ -369,7 +371,7 @@ input.search-form:hover {
       position: fixed;
       top:0;
       width: 100%;
-      background: black;
+      background: rgba(21, 48, 199, 0.4);
       z-index: 99999;
 }
 /*************************
@@ -2701,12 +2703,41 @@ background: #c8ebef;
       text-align: center;
 }
 
-.logo{
-  padding:0;
-  margin:0;
-  font-size: 14pt;
-  font-style: italic;
-  font-family: monospace;
+.linear-re h2{
+  border:solid rgb(228, 27, 54) 5px;
+  padding: 5px;
+  border-radius: 10px;
+  color: #3f51b5;
+}
+.cent-tel{
+  padding: 10px;
+  margin-top: 60px;
+  background: rgba(232, 36, 98, 0.75);
+  border:solid 2px red;
+  border-radius: 0px 50px;
+
+}
+
+.cent-tel i{
+  color:#4caf50;
+  font-size: 36px;
+}
+
+.cent-tel span{
+  margin: 0px;
+  padding: 0px;
+  margin-left: 5px;
+  font-size: 28px;
+  font-weight: bolder;
+  color: #2196f3;
+  text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+}
+
+.cent-tel h1{
+  margin: 5px 0px;
+  padding: 0px;
+  font-weight: bolder;
+  text-align: center;
 }
 /************************
 ********* Pdf pagina ******
