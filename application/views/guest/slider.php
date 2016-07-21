@@ -7,7 +7,7 @@
 
         </ol>
         <div class="carousel-inner">
-            <div class="item active" style="background-image: url(<?=base_url()?>/plantillas/images/slider/bg1.jpg)">
+            <div class="item active" style="background-image: url(<?=base_url()?>/plantillas/images/slider/bg1.png)">
                 <div class="container">
                     <div class="row slide-margin">
                         <div class="col-sm-6">
@@ -17,9 +17,9 @@
                                 <h2 class="animation animated-item-2">Calle Ricardo Angulo N°180 - San Isidro</h2>
                                 <a class="btn-slide animation animated-item-3" href="#">Contactanos</a>
                             </div>
-                            <div class="col-md-8 col-sm-12 col-xs-10 cent-tel">
+                            <div class="col-md-8 col-sm-12 col-xs-8 cent-tel">
                                 <i class="fa fa-phone-square"></i><span>Central Telefonica:</span>
-                                <h1>(01) 222-2542</h1>
+                                <p>(01) 222-2542</p>
                             </div>
                         </div>
 
@@ -33,7 +33,7 @@
                 </div>
             </div><!--/.item-->
 
-            <div class="item" style="background-image: url(<?=base_url()?>/plantillas/images/slider/bg2.jpg)">
+            <div class="item" style="background-image: url(<?=base_url()?>/plantillas/images/slider/bg2.jpg) ">
                 <div class="container">
                     <div class="row slide-margin">
                         <div class="col-sm-6">

@@ -1,6 +1,6 @@
 <!-- publicacion de post -->
 <!--about us-->
-<section class="aboutus" id="post">
+<section class="aboutus">
 <div class="container">
   <div class="center wow fadeInDown">
     <div class="linear-re ">
@@ -9,7 +9,7 @@
 
     <h3></h3>
   </div>
-  <div class="row">
+  <div class="row" id="post">
   <?php
   foreach ($consulta as $fila) {
 
@@ -34,30 +34,33 @@
 </section>
 <br>
 <script type="text/javascript">
+$(document).ready(function(){
   $("#pagination").on("click","li",function(){
-    var i=$(this);
-    var request;
-    alert(i.text());
-    if(request==true){
-      request.abort();
-    }
-    request = $.ajax({
-    url:"<?php  echo base_url('materiales/mostrar')?>",
-    type:"Post",
-     dataType: "json",
-    data:"idCategoria=" +idCategoria
-    });
+      var i=$(this);
+      var c=$("#post");
+      var request;
+      alert(i.text());
+      if(request==true){
+        request.abort();
+      }
+      request = $.ajax({
+      url:"<?php  echo base_url('home/post')?>",
+      type:"Post",
+       dataType: "json",
+      data:"id=" +id
+      });
 
-    request.done(function (response,textStatus,jqXHR) {
-          opt="";li="";
-          for(var i=0, len=response.length; i<len; i++) {
-               var opt = opt + "<option value="+response[i].idMaterial+">"+ response[i].nombre+" "+response[i].medida+"</option>";
-          }
-        $("#idMaterial").html(opt);
-    });
-    request.fail(function (jqXHR,textStatus,thrown) {
-          console.log("Erros :" + textStatus);
-    });
+      request.done(function (response,textStatus,jqXHR) {
+            c.html("");
+            for(var i=0, len=response.length; i<len; i++) {
+                 var opt = opt + "<option value="+response[i].idMaterial+">"+ response[i].nombre+" "+response[i].medida+"</option>";
+            }
+          $("#idMaterial").html(opt);
+      });
+      request.fail(function (jqXHR,textStatus,thrown) {
+            console.log("Erros :" + textStatus);
+      });
 
   });
+});
 </script>

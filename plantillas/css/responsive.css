@@ -188,11 +188,12 @@
 /* xs */
 @media (max-width: 767px) {
   .container > .navbar-header, .container > .navbar-collapse{
-    margin-left: 10;
+    margin-left: 10px;
   }
 
   .top-number{
     font-size: 14px;
+
   }
 
   input.search-form:hover {
@@ -209,6 +210,31 @@
 
   #main-slider .carousel h2 {
     font-size: 16px;
+  }
+
+#main-slider .carousel .item {
+  height: 400px;
+}
+
+#main-slider .carousel .carousel-content {
+  margin-top: 0px;
+}
+
+#main-slider .carousel .slide-margin{
+  margin-top: 60px;
+}
+
+.cent-tel{
+  margin-top:20px;
+}
+
+  .cent-tel i, .cent-tel span{
+    font-size: 14px;
+  }
+
+
+  .cent-tel p{
+    font-size: 20px;
   }
 
   .feature-wrap h2,

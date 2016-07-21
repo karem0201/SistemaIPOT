@@ -30,7 +30,7 @@ class  Home extends CI_Controller
     $this->load->view("/Guest/slider",$data);
 
     $this->load->library('pagination');
-    $config [ 'base_url' ]  =  base_url() .'home/index';
+    $config [ 'base_url' ]  = "#";
     $config [ 'total_rows' ]  =  $this->post->num_post() ;
     $config [ 'per_page' ]  =  2 ;
       //$config [ 'uri_segment' ]  =  3;
@@ -59,7 +59,8 @@ class  Home extends CI_Controller
     $this->pagination->initialize($config);
     $result = $this->post->get_pagination($config['per_page']);
     //echo json_encode($result);
-    $this->post->get_pagination($config['per_page']);
+
+    $this->load->view("/Guest/testimonial");
     $data['consulta'] =$result;
     $data['pagination'] =$this->pagination->create_links();
     $this->load->view("/Guest/post",$data);
@@ -68,7 +69,10 @@ class  Home extends CI_Controller
 
   }
 
+public function pagePost($value='')
+{
 
+}
 public function returnPost()
 {$this->load->library('pagination');
 $config [ 'base_url' ]  =  base_url() .'home/index';
