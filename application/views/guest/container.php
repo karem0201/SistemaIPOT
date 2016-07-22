@@ -1,72 +1,9 @@
 <!-- Main Content -->
-
-
-<section id="feature" >
-    <div class="container">
-       <div class="center wow fadeInDown">
-            <h2>Features</h2>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
-        </div>
-
-        <div class="row">
-            <div class="features">
-                <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-                    <div class="feature-wrap">
-                        <i class="fa fa-bullhorn"></i>
-                        <h2>Fresh and Clean</h2>
-                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
-                    </div>
-                </div><!--/.col-md-4-->
-
-                <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-                    <div class="feature-wrap">
-                        <i class="fa fa-comments"></i>
-                        <h2>Retina ready</h2>
-                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
-                    </div>
-                </div><!--/.col-md-4-->
-
-                <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-                    <div class="feature-wrap">
-                        <i class="fa fa-cloud-download"></i>
-                        <h2>Easy to customize</h2>
-                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
-                    </div>
-                </div><!--/.col-md-4-->
-
-                <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-                    <div class="feature-wrap">
-                        <i class="fa fa-leaf"></i>
-                        <h2>Adipisicing elit</h2>
-                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
-                    </div>
-                </div><!--/.col-md-4-->
-
-                <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-                    <div class="feature-wrap">
-                        <i class="fa fa-cogs"></i>
-                        <h2>Sed do eiusmod</h2>
-                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
-                    </div>
-                </div><!--/.col-md-4-->
-
-                <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-                    <div class="feature-wrap">
-                        <i class="fa fa-heart"></i>
-                        <h2>Labore et dolore</h2>
-                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
-                    </div>
-                </div><!--/.col-md-4-->
-            </div><!--/.services-->
-        </div><!--/.row-->
-    </div><!--/.container-->
-</section><!--/#feature-->
-
 <section id="recent-works">
     <div class="container">
         <div class="center wow fadeInDown">
-            <h2>Recent Works</h2>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+            <h2>Recientes contribuciones</h2>
+            <p class="lead">Crecemos e incentivamos el crecimiento profesional <br> El IPOT fomenta la colaboracion entre la comunidad médica</p>
         </div>
 
         <div class="row">
@@ -75,7 +12,7 @@
                     <img class="img-responsive" src="<?= base_url()?>/plantillas/images/portfolio/recent/item1.png" alt="">
                     <div class="overlay">
                         <div class="recent-work-inner">
-                            <h3><a href="#">Business theme</a> </h3>
+                            <h3><a href="#">BIENAL 2016</a> </h3>
                             <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
                             <a class="preview" href="<?= base_url()?>/plantillas/images/portfolio/full/item1.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
                         </div>
@@ -180,20 +117,42 @@
 <section id="services" class="service-item">
  <div class="container">
         <div class="center wow fadeInDown">
-            <h2>Our Service</h2>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+            <h2>Nuestros servicios</h2>
+            <p class="lead">Además de las atenciones médicas<br> Brindamos estos servicios en nuestras instalaciones</p>
         </div>
 
         <div class="row">
 
+          <div class="col-sm-6 col-md-4">
+              <div class="media services-wrap wow fadeInDown">
+                  <div class="pull-left">
+                      <img class="img-responsive" src="<?=base_url()?>/plantillas/images/services/atencion.png">
+                  </div>
+                  <div class="media-body">
+                      <h3 class="media-heading">Atenci&oacute;n m&eacute;dica</h3>
+                      <p>Consultas por orden de llegada y previa cita.</p>
+                  </div>
+              </div>
+            </div>
             <div class="col-sm-6 col-md-4">
                 <div class="media services-wrap wow fadeInDown">
                     <div class="pull-left">
-                        <img class="img-responsive" src="<?=base_url()?>/plantillas/images/services/services1.png">
+                        <img class="img-responsive" src="<?=base_url()?>/plantillas/images/services/cirugia.png">
                     </div>
                     <div class="media-body">
-                        <h3 class="media-heading">SEO Marketing</h3>
-                        <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
+                        <h3 class="media-heading">Cirugía</h3>
+                        <p>Con convenio con la Clínica Ricardo Palma.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="media services-wrap wow fadeInDown">
+                    <div class="pull-left">
+                        <img class="img-responsive" src="<?=base_url()?>plantillas/images/services/podologia.png">
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">Podolog&iacute;a</h3>
+                        <p>Una licenciada calificada al cuidado de sus pies</p>
                     </div>
                 </div>
             </div>
@@ -201,11 +160,11 @@
             <div class="col-sm-6 col-md-4">
                 <div class="media services-wrap wow fadeInDown">
                     <div class="pull-left">
-                        <img class="img-responsive" src="<?=base_url()?>/plantillas/images/services/services2.png">
+                        <img class="img-responsive" src="<?=base_url()?>/plantillas/images/services/alquiler.png">
                     </div>
                     <div class="media-body">
-                        <h3 class="media-heading">SEO Marketing</h3>
-                        <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
+                        <h3 class="media-heading">Alquiler</h3>
+                        <p>Silla de ruedas, andador con ruedas, marcapaso y muletas.</p>
                     </div>
                 </div>
             </div>
@@ -213,11 +172,11 @@
             <div class="col-sm-6 col-md-4">
                 <div class="media services-wrap wow fadeInDown">
                     <div class="pull-left">
-                        <img class="img-responsive" src="<?=base_url()?>/plantillas/images/services/services3.png">
+                        <img class="img-responsive" src="<?=base_url()?>/plantillas/images/services/ortesis.png">
                     </div>
                     <div class="media-body">
-                        <h3 class="media-heading">SEO Marketing</h3>
-                        <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
+                        <h3 class="media-heading">Venta de ortesis</h3>
+                        <p>Cabestrillos, ferulas, cojin lumbar,etc.</p>
                     </div>
                 </div>
             </div>
@@ -225,41 +184,82 @@
             <div class="col-sm-6 col-md-4">
                 <div class="media services-wrap wow fadeInDown">
                     <div class="pull-left">
-                        <img class="img-responsive" src="<?=base_url()?>/plantillas/images/services/services4.png">
+                        <img class="img-responsive" src="<?=base_url()?>/plantillas/images/services/plantillas.png">
                     </div>
                     <div class="media-body">
-                        <h3 class="media-heading">SEO Marketing</h3>
-                        <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-md-4">
-                <div class="media services-wrap wow fadeInDown">
-                    <div class="pull-left">
-                        <img class="img-responsive" src="<?=base_url()?>/plantillas/images/services/services5.png">
-                    </div>
-                    <div class="media-body">
-                        <h3 class="media-heading">SEO Marketing</h3>
-                        <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-md-4">
-                <div class="media services-wrap wow fadeInDown">
-                    <div class="pull-left">
-                        <img class="img-responsive" src="<?=base_url()?>/plantillas/images/services/services6.png">
-                    </div>
-                    <div class="media-body">
-                        <h3 class="media-heading">SEO Marketing</h3>
-                        <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
+                        <h3 class="media-heading">Confección</h3>
+                        <p>Atendemos las recetas de confección de plantillas.</p>
                     </div>
                 </div>
             </div>
         </div><!--/.row-->
     </div><!--/.container-->
 </section><!--/#services-->
+
+<section id="feature" >
+    <div class="container">
+       <div class="center wow fadeInDown">
+            <h2>Features</h2>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+        </div>
+
+        <div class="row">
+            <div class="features">
+                <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                    <div class="feature-wrap">
+                        <i class="fa fa-bullhorn"></i>
+                        <h2>Fresh and Clean</h2>
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+                    </div>
+                </div><!--/.col-md-4-->
+
+                <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                    <div class="feature-wrap">
+                        <i class="fa fa-comments"></i>
+                        <h2>Retina ready</h2>
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+                    </div>
+                </div><!--/.col-md-4-->
+
+                <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                    <div class="feature-wrap">
+                        <i class="fa fa-cloud-download"></i>
+                        <h2>Easy to customize</h2>
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+                    </div>
+                </div><!--/.col-md-4-->
+
+                <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                    <div class="feature-wrap">
+                        <i class="fa fa-leaf"></i>
+                        <h2>Adipisicing elit</h2>
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+                    </div>
+                </div><!--/.col-md-4-->
+
+                <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                    <div class="feature-wrap">
+                        <i class="fa fa-cogs"></i>
+                        <h2>Sed do eiusmod</h2>
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+                    </div>
+                </div><!--/.col-md-4-->
+
+                <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                    <div class="feature-wrap">
+                        <i class="fa fa-heart"></i>
+                        <h2>Labore et dolore</h2>
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+                    </div>
+                </div><!--/.col-md-4-->
+            </div><!--/.services-->
+        </div><!--/.row-->
+    </div><!--/.container-->
+</section><!--/#feature-->
+
+
+
+
 
 <section id="middle">
     <div class="container">

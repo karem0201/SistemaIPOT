@@ -16,11 +16,11 @@
    ?>
          <section class="col-md-6">
            <div class="papers text-center" >
-             <img src="<?= base_url()?>public/imagenes/<?= $fila->imagen ?>" alt=""><br/>
-             <a href="#"><b>Download my resume</b></a>
+             <div class="imagen" style="background-image:url(<?= base_url()?>public/imagenes/<?= $fila->imagen ?>);"></div><br/>
+             <a href="#"><b>Descargar resumen</b></a>
              <h4 class="notopmarg nobotmarg"><?= $fila->nombreAb?></h4>
              <p>
-               <?= $fila->contenido?>
+               <?= $fila->subdescripcion?>
              </p>
            </div>
          </section>

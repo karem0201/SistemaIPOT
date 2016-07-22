@@ -28,7 +28,7 @@
                     </ul>
                 </li>
                 <li><a href="portfolio.html">Tienda</a></li>
-                <li><a href="blog.html">Comit&eacute; cient&iacute;fico</a></li>
+                <li><a href="blog.html">Traumatolog&iacute;a al d&iacute;a</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact-us.html">Cont&aacute;ctenos</a></li>
             </ul>

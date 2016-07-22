@@ -1,6 +1,13 @@
 <section id="content">
     <div class="container">
         <div class="row">
+          <div class="center wow fadeInDown">
+            <div class="linear-re osc">
+                <h2>Nuestros pacientes</h2>
+            </div>
+
+            <h3></h3>
+          </div>
             <div class="col-xs-12 col-sm-8 wow fadeInDown">
                <div class="tab-wrap">
                     <div class="media">
