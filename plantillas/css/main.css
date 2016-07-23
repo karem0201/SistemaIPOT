@@ -345,7 +345,7 @@ input.search-form:hover {
       z-index: 99999;
 }
 
-.sticky li >a{
+.sticky .navbar-nav >li>a{
   -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 2.125);
   -moz-box-shadow: 0 3px 10px rgba(0, 0, 0, 2.125);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 2.125);
@@ -2779,6 +2779,95 @@ background: #c8ebef;
   font-weight: bolder;
   text-align: center;
 }
+
+
+.banner{
+    position:relative;
+    max-width: 100%;
+    margin-top: 0px;
+    padding-top: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:350px;
+
+}
+
+.medico{
+
+padding: 0;
+list-style: none;
+
+}
+.medico .c{
+  margin:6px 3px;
+  background-color: rgba(255, 255, 255, 0.48);
+  padding: 0;
+
+}
+
+.medico img{
+  margin:0;
+  margin: 5px;
+  border:1px solid black;
+
+}
+
+.medico h1{
+  padding: 0px;
+  margin:0px;
+  margin-top: 5px;
+  text-transform:capitalize;
+  font-size: 11pt;
+  font-weight: bolder;
+  color:black;
+  line-height: 15px;
+}
+
+.medico p{
+  padding: 0;
+  margin: 0;
+  margin-top: 5px;
+  color: #3a53de;
+  font-size: 8pt;
+  font-weight: bold;
+  line-height: 15px;
+  text-align: center;
+}
+
+.medico a{
+  font-family: cursive;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 5px;
+  right: 8px;
+}
 /************************
-********* Pdf pagina ******
+********* historia ******
 *************************/
+#history {
+  background: url(../images/partners/partner_bg.png) 50% 50% no-repeat;
+  background-size: cover;
+  padding: 0;
+}
+
+#history h2,
+#history h3 {
+  color: #fff;
+}
+
+.history{
+  color:#fff;
+}
+
+.history ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.history ul li{
+  display: inline-block;
+  float: left;
+  width: 20%;
+}

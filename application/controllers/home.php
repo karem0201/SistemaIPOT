@@ -19,6 +19,7 @@ class  Home extends CI_Controller
     //     die();
     // }
     parent::__construct();
+    $this->load->model(array('mmedico'));
 }
   public function  index()
   {
@@ -106,6 +107,31 @@ $result = $this->post->get_pagination($config['per_page']);
 echo json_encode($result);
 
 }
+
+  public function historia()
+  {
+    $data = array('title'=>'Historia | IPOT-CRP');
+    $this->load->view("/Guest/head",$data);
+    $this->load->view("/Guest/header",$data);
+    $this->load->view("/Guest/nav",$data);
+    $this->load->view("/Guest/historia",$data);
+    $this->load->view("/Guest/testimonial",$data);
+    $this->load->view("/Guest/footer",$data);
+  }
+
+  public function staff()
+  {
+    $data = array('title'=>'Staff | IPOT-CRP');
+    $this->load->view("/Guest/head",$data);
+    $this->load->view("/Guest/header",$data);
+    $this->load->view("/Guest/nav",$data);
+  //print_r($this->mmedico->mostrar());
+    $q=$this->mmedico->mostrar();
+    $data=array('medicos'=>$q);
+    $this->load->view("/Guest/staff",$data);
+    $this->load->view("/Guest/testimonial",$data);
+    $this->load->view("/Guest/footer",$data);
+  }
 }
 
  ?>

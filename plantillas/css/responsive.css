@@ -329,10 +329,19 @@
     margin-bottom: 1px;
 
   }
+
 }
 
 /* XS Portrait */
 @media (max-width: 480px) {
+  .medico{
+    width: 100%;
+  }
+.medico .imagen{
+  width: 30%;
+}
 
-
+.medico .texto{
+  width: 70%;
+}
 }

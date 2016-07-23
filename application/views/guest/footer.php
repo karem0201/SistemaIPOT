@@ -17,7 +17,6 @@
     </div>
 </footer><!--/#footer-->
 
-<script src="<?=base_url()?>/plantillas/js/jquery.js"></script>
 <script src="<?=base_url()?>/plantillas/js/bootstrap.min.js"></script>
 <script src="<?=base_url()?>/plantillas/js/jquery.prettyPhoto.js"></script>
 <script src="<?=base_url()?>/plantillas/js/jquery.isotope.min.js"></script>

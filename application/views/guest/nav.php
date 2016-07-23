@@ -13,21 +13,27 @@
 
         <div class="collapse navbar-collapse navbar-right" >
             <ul class="nav navbar-nav" >
-                <li class="active"><a href="index.html"><spam class="fa fa-home"></spam> Inicio</a></li>
+                <li class="active"><a href="<?= base_url()?>"><spam class="fa fa-home"></spam> Inicio</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Nosotros <i class="fa fa-angle-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="blog-item.html">Historia</a></li>
+                        <li><a href="<?= base_url()?>/home/historia">Historia</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Especialidades <i class="fa fa-angle-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="blog-item.html">Staff M&eacute;dico</a></li>
+                        <li><a href="<?= base_url()?>home/staff">Staff M&eacute;dico</a></li>
                         <li><a href="blog-item.html">Testimonios</a></li>
                     </ul>
                 </li>
-                <li><a href="portfolio.html">Tienda</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Servicios <i class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="blog-item.html">Tienda</a></li>
+                        <li><a href="#services">Podolog&iacute;a</a></li>
+                    </ul>
+                </li>
                 <li><a href="blog.html">Traumatolog&iacute;a al d&iacute;a</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact-us.html">Cont&aacute;ctenos</a></li>

@@ -1,7 +1,7 @@
 <!-- Main Content -->
 <section id="recent-works">
     <div class="container">
-        <div class="center wow fadeInDown">
+        <div class="center wow fadeInDown linear-re">
             <h2>Recientes contribuciones</h2>
             <p class="lead">Crecemos e incentivamos el crecimiento profesional <br> El IPOT fomenta la colaboracion entre la comunidad médica</p>
         </div>
@@ -76,7 +76,7 @@
                 <div class="recent-work-wrap">
                     <img class="img-responsive" src="<?= base_url()?>/plantillas/images/portfolio/recent/item6.png" alt="">
                     <div class="overlay">
-                        <div class="recent-work-inner">
+                        <div class="recent-work-inner ">
                             <h3><a href="#">Business theme </a></h3>
                             <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
                             <a class="preview" href="<?= base_url()?>/plantillas/images/portfolio/full/item6.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
