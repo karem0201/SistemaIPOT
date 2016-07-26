@@ -1,5 +1,6 @@
 <section id="history">
-  <div class="banner" style="background:url(<?=base_url()?>/plantillas/images/slider/traumatologos.png);">
+  <div class="banner" style="background-image:url(<?=base_url()?>/plantillas/images/slider/traumatologos.png);">
+
   </div>
     <div class="container">
         <div class="row">

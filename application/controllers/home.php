@@ -20,6 +20,7 @@ class  Home extends CI_Controller
     // }
     parent::__construct();
     $this->load->model(array('mmedico'));
+    $this->load->model(array('mproductos'));
 }
   public function  index()
   {
@@ -66,6 +67,7 @@ class  Home extends CI_Controller
     $data['pagination'] =$this->pagination->create_links();
     $this->load->view("/Guest/post",$data);
     $this->load->view("/Guest/container",$data);
+    $this->load->view("/Guest/servicios",$data);
     $this->load->view("/Guest/footer",$data);
 
   }
@@ -130,6 +132,34 @@ echo json_encode($result);
     $data=array('medicos'=>$q);
     $this->load->view("/Guest/staff",$data);
     $this->load->view("/Guest/testimonial",$data);
+    $this->load->view("/Guest/footer",$data);
+  }
+
+  public function tienda()
+  {
+    $data = array('title'=>'Tienda | IPOT-CRP');
+    $this->load->view("/Guest/head",$data);
+    $this->load->view("/Guest/header",$data);
+    $this->load->view("/Guest/nav",$data);
+    $q=$this->mproductos->getMateriales('5');
+    // print_r($q);
+    $data=array('materiales'=>$q);
+    $this->load->view("/Guest/tienda",$data);
+    $this->load->view("/Guest/servicios",$data);
+    $this->load->view("/Guest/footer",$data);
+  }
+
+  public function podologia()
+  {
+    $data = array('title'=>'Podolog&iacute;a | IPOT-CRP');
+    $this->load->view("/Guest/head",$data);
+    $this->load->view("/Guest/header",$data);
+    $this->load->view("/Guest/nav",$data);
+    $q=$this->mproductos->getMateriales('5');
+    // print_r($q);
+    $data=array('materiales'=>$q);
+    $this->load->view("/Guest/podologia",$data);
+    $this->load->view("/Guest/servicios",$data);
     $this->load->view("/Guest/footer",$data);
   }
 }

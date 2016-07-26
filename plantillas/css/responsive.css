@@ -11,9 +11,6 @@
     margin-left: -10px;
     margin-right: -10px;
   }
-
-
-
 }
 
 /* md */
@@ -33,6 +30,7 @@
   .navbar-collapse {
     padding-left: 0;
     padding-right: 0;
+
   }
 
   .recent-work-wrap .recent-work-inner h3 a {
@@ -110,11 +108,13 @@
   .navbar-collapse {
     padding-left: 0;
     padding-right: 0;
+
   }
 
   .navbar-nav > li {
     margin-left: 0;
   }
+
 
   #main-slider .carousel h1 {
     font-size: 25px;
@@ -189,6 +189,9 @@
     margin-bottom: 1px;
 
   }
+
+
+
 }
 
 /* xs */
@@ -330,6 +333,10 @@
 
   }
 
+  #tienda h1{
+    font-size: 24px;
+  }
+
 }
 
 /* XS Portrait */
@@ -343,5 +350,9 @@
 
 .medico .texto{
   width: 70%;
+}
+
+.spc{
+  width: 100%;
 }
 }

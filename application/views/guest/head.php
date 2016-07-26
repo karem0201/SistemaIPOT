@@ -28,5 +28,5 @@
 
 
     <script src="<?=base_url()?>/plantillas/js/jquery.js"></script>
-
+  
 </head><!--/head-->
