@@ -19,7 +19,7 @@ class  Home extends CI_Controller
     //     die();
     // }
     parent::__construct();
-    $this->load->model(array('mmedico'));
+    $this->load->model(array('mtrabajador'));
     $this->load->model(array('mproductos'));
 }
   public function  index()
@@ -128,9 +128,12 @@ echo json_encode($result);
     $this->load->view("/Guest/header",$data);
     $this->load->view("/Guest/nav",$data);
   //print_r($this->mmedico->mostrar());
-    $q=$this->mmedico->mostrar();
-    $data=array('medicos'=>$q);
+    $q=$this->mtrabajador->mostrarMedico();
+    $l=$this->mtrabajador->listEspecialidad();
+    $e=$this->mtrabajador->especialidad();
+    $data=array('medicos'=>$q,'esp'=>$l,'especialidad'=>$e);
     $this->load->view("/Guest/staff",$data);
+    $this->load->view("/Guest/horario",$data);
     $this->load->view("/Guest/testimonial",$data);
     $this->load->view("/Guest/footer",$data);
   }
@@ -155,9 +158,6 @@ echo json_encode($result);
     $this->load->view("/Guest/head",$data);
     $this->load->view("/Guest/header",$data);
     $this->load->view("/Guest/nav",$data);
-    $q=$this->mproductos->getMateriales('5');
-    // print_r($q);
-    $data=array('materiales'=>$q);
     $this->load->view("/Guest/podologia",$data);
     $this->load->view("/Guest/servicios",$data);
     $this->load->view("/Guest/footer",$data);

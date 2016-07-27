@@ -24,6 +24,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Especialidades <i class="fa fa-angle-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="<?= base_url()?>home/staff">Staff M&eacute;dico</a></li>
+                        <li><a href="<?= base_url()?>home/staff">Preg&uacute;ntale a tu m&eacute;dico</a></li>
                         <li><a href="blog-item.html">Testimonios</a></li>
                     </ul>
                 </li>
@@ -36,7 +37,14 @@
                 </li>
                 <li><a href="blog.html">Traumatolog&iacute;a al d&iacute;a</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact-us.html">Cont&aacute;ctenos</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cont&aacute;ctanos <i class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="<?= base_url()?>home/staff">Preg&uacute;ntale a tu m&eacute;dico</a></li>
+                        <li><a href="<?= base_url()?>cita">Separa tu cita</a></li>
+                    </ul>
+                </li>
+
             </ul>
         </div>
     </div><!--/.container-->

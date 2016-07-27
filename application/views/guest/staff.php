@@ -26,10 +26,18 @@
 
                                     </div>
                                     <div class="media-body">
-                                        <p>Cadera</p>
-                                        <p>Columna Vertebral</p>
-                                        <p>Hombro y Rodilla</p>
-                                        <p>Pie, tobillo y mano</p>
+                                        <div id="optEspecialidad">
+                                          <input type="radio" name="options" value="-1" checked = "checked"/> Todos<br>
+
+                                          <?php
+                                          $radio = "";
+                                          foreach ($especialidad as $key) {
+                                              $radio .='<input type="radio" name="options" value="'.$key->idEspecialidad .'" autocomplete="off">'.$key->descripcion.'<br>';
+
+                                          }
+                                          echo $radio;
+                                          ?>
+                                        </div>
                                     </div>
                               </div>
                           </div>
@@ -65,12 +73,15 @@
                         </div>
                         <div id="collapseThree1" class="panel-collapse collapse">
                           <div class="panel-body">
-                            <p>Lunes</p>
-                            <p>Martes</p>
-                            <p>Miércoles</p>
-                            <p>Jueves</p>
-                            <p>Viernes</p>
-                            <p>S&aacute;bado</p>
+                            <div id="optDias">
+                              <input type="radio" name="options" value="todos" checked > Todos<br>
+                              <input type="radio" name="options" value="lunes">Lunes<br>
+                              <input type="radio" name="options" value="martes">Martes<br>
+                              <input type="radio" name="options" value="miércoles">Miércoles<br>
+                              <input type="radio" name="options" value="jueves">Jueves<br>
+                              <input type="radio" name="options" value="viernes">Viernes<br>
+                              <input type="radio" name="options" value="sábado">S&aacute;bado<br>
+                            </div>
                           </div>
                         </div>
 
@@ -85,7 +96,7 @@
             <div class="col-sm-8 wow fadeInDown">
               <h2 style="padding-bottom:15px; text-align:center;">Nuestros m&eacute;dicos</h2>
 
-              <div class="row">
+              <div class="row" id="content-medico">
                 <?php foreach ($medicos as $key){ ?>
                   <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 medico" >
                     <div class="row c">
@@ -93,10 +104,18 @@
                           <img src="<?= base_url();?>/plantillas/images/medicos/<?= $key->foto;?>" alt="" />
                       </div>
                       <div class="col-sm-7 col-xs-6 texto" >
-                        <h1><?="Dr. ". $key->nombre .", ".$key->apPaterno." ".$key->apMaterno?></h1>
-                        <p><?=$key->descripcion?></p>
+                        <h1><?= $key->apPaterno." ".$key->apMaterno.", ".$key->nombre ?></h1>
+                          <?php $text = " ";
+                          foreach ($esp as $e){
+                            if($e->idTrabajador == $key->idTrabajador){
+                              $text = $text . $e->descripcion.", ";
+                            }
+                          }
+                          echo "<p>".$text."</p>";
+                          ?>
+
                       </div>
-                        <a class="preview" href="<?= base_url()?>/plantillas/images/portfolio/full/item1.png" rel="prettyPhoto"><i class="fa fa-eye"></i> Ver horario</a>
+                        <a data-toggle="modal" data-target="#horario"><span class="fa fa-eye" ></span>Ver horario</a>
                     </div>
 
                   </div>
@@ -109,3 +128,109 @@
         </div><!--/.row-->
     </div><!--/.container-->
 </section><!--/#middle-->
+
+<script type="text/javascript">
+$(document).ready( function() {
+      var divContent = $("#content-medico");
+      var optEsp = $("#optEspecialidad");
+      var optDias = $("#optDias");
+
+      optEsp.on('click','input',function(){
+             var opt = $(this).attr('value');
+             var request;
+
+             divContent.html("");
+                if(request==true){
+                  request.abort();
+                }
+
+                  request = $.ajax({
+                  url:"<?php  echo base_url('trabajador/medicoByEspecialidad')?>",
+                  type:"Post",
+                   dataType: "json",
+                  data:"opt=" +opt
+                  });
+
+                  request.done(function (response,textStatus,jqXHR) {
+                    console.log(response);
+                    content = "";
+                    for (var i = 0; i < response.length; i++) {
+                      content = content + '<div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 medico" >';
+                        content = content + '<div class="row c">';
+                          content = content + '<div class="col-sm-5 col-xs-6 imagen" style="padding:0;">'
+                              content = content + '<img style="width:90%" src="<?= base_url();?>/plantillas/images/medicos/'+response[i].foto+'" alt="" />';
+                          content = content + '</div>';
+                          content = content + '<div class="col-sm-7 col-xs-6 texto" >';
+                            content = content + '<h1>'+response[i].apPaterno+' '+response[i].apMaterno+', '+response[i].nombre+'</h1>';
+                            content = content + '<p>'+response[i].descripcion +'</p>';
+                          content = content + '</div>';
+                            content = content + '<a data-toggle="modal" data-target="#horario"><span class="fa fa-eye" ></span>Ver horario</a>';
+                        content = content + '</div>';
+                        content = content + '</div>';
+
+                    }
+
+                    divContent.append(content);
+                  });
+
+                  request.fail(function (jqXHR,textStatus,thrown) {
+                        console.log("Error :" + textStatus);
+                  });
+
+                  request.always(function () {
+                        console.log("termino la ejecucion de ajax");
+                  });
+        });
+
+        optDias.on('click','input',function(){
+               var opt = $(this).attr('value');
+               var request;
+
+               console.log(opt);
+               divContent.html("");
+                  if(request==true){
+                    request.abort();
+                  }
+
+                    request = $.ajax({
+                    url:"<?php  echo base_url('horario/mostrarByDia')?>",
+                    type:"Post",
+                     dataType: "json",
+                    data:"opt=" +opt
+                    });
+
+                    request.done(function (response,textStatus,jqXHR) {
+                      console.log(response);
+                      content = "";
+                      for (var i = 0; i < response.length; i++) {
+                        content = content + '<div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 medico" >';
+                          content = content + '<div class="row c">';
+                            content = content + '<div class="col-sm-5 col-xs-6 imagen" style="padding:0;">'
+                                content = content + '<img style="width:90%" src="<?= base_url();?>/plantillas/images/medicos/'+response[i].foto+'" alt="" />';
+                            content = content + '</div>';
+                            content = content + '<div class="col-sm-7 col-xs-6 texto" >';
+                              content = content + '<h1>'+response[i].apPaterno+' '+response[i].apMaterno+', '+response[i].nombre+'</h1>';
+                              //content = content + '<p>'+response[i].descripcion +'</p>';
+                            content = content + '</div>';
+                              content = content + '<a data-toggle="modal" data-target="#horario"><span class="fa fa-eye" ></span>Ver horario</a>';
+                          content = content + '</div>';
+                          content = content + '</div>';
+
+                      }
+
+                      divContent.append(content);
+                    });
+
+                    request.fail(function (jqXHR,textStatus,thrown) {
+                          console.log("Error :" + textStatus);
+                    });
+
+                    request.always(function () {
+                          console.log("termino la ejecucion de ajax");
+                    });
+
+           });
+
+  });
+
+</script>

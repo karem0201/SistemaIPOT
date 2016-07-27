@@ -37,7 +37,7 @@ class Soft_sop extends CI_Controller
             $id =$this->session->userdata('idTipUsu');
             $result=$this->muser->getPermisos($id);
             $data=array('permiso'=>$result);
-            $this->load->view('vsoft_sop/notificaciones',$data);
+            // $this->load->view('vsoft_sop/notificaciones',$data);
             $this->load->view('vsoft_sop/navEstatico',$data);
             $this->load->model('mcirugia');
             $consulta = $this->mcirugia->get();
@@ -54,7 +54,7 @@ class Soft_sop extends CI_Controller
             $id =$this->session->userdata('idTipUsu');
             $result=$this->muser->getPermisos($id);
             $data=array('permiso'=>$result);
-            $this->load->view('vsoft_sop/notificaciones',$data);
+            //$this->load->view('vsoft_sop/notificaciones',$data);
             $this->load->view('vsoft_sop/navEstatico',$data);
             $this->load->model(array('mpaciente'));
             $result = $this->mpaciente->mostrar();

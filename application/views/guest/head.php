@@ -15,7 +15,11 @@
     <link href="<?=base_url()?>/plantillas/css/animate.min.css" rel="stylesheet">
     <link href="<?=base_url()?>/plantillas/css/prettyPhoto.css" rel="stylesheet">
     <link href="<?=base_url()?>/plantillas/css/main.css" rel="stylesheet">
-    <link href="<?=base_url()?>/plantillas/css/responsive.css" rel="stylesheet">
+    <link href="<?=base_url()?>/plantillas/css/responsive.css" rel="stylesheet">    
+    <link href="<?=base_url()?>/plantillas/css/bootstrap-datepicker.css" rel="stylesheet">
+
+
+
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -28,5 +32,5 @@
 
 
     <script src="<?=base_url()?>/plantillas/js/jquery.js"></script>
-  
+
 </head><!--/head-->

@@ -15,7 +15,7 @@ class Intranet extends CI_Controller
       {
             $this->load->view('guest/head');
             $this->load->view('guest/header');
-            $this->load->view('vintranet/nav');
+            $this->load->view('guest/nav');
             if($this->session->userdata('login')){
                   $this->load->model(array('muser'));
                   $result=$this->muser->getPermisos($this->session->userdata('idTipUsu'));

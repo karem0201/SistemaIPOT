@@ -5,7 +5,7 @@
 class Mpaciente extends CI_Model
 {
       public function insertar($new='')
-      { 
+      {
             if ($new != null){
             $datos = array(
                   'nombre' =>$new['nombre'],
