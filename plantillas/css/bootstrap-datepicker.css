@@ -12,6 +12,8 @@
   -moz-border-radius: 4px;
   border-radius: 4px;
   direction: ltr;
+  color: #2303f4;
+  font-weight: bolder;
 }
 .datepicker-inline {
   width: 220px;

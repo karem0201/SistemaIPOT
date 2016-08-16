@@ -10,7 +10,7 @@
           <div class="col-sm-6 col-md-4">
               <div class="media services-wrap wow fadeInDown">
                   <div class="pull-left">
-                      <img class="img-responsive" src="<?=base_url()?>/plantillas/images/services/atencion.png">
+                    <img class="img-responsive" src="<?=base_url()?>/plantillas/images/services/atencion.png">
                   </div>
                   <div class="media-body">
                       <h3 class="media-heading">Atenci&oacute;n m&eacute;dica</h3>
@@ -32,7 +32,7 @@
             <div class="col-sm-6 col-md-4">
                 <div class="media services-wrap wow fadeInDown">
                     <div class="pull-left">
-                        <img class="img-responsive" src="<?=base_url()?>plantillas/images/services/podologia.png">
+                        <a href="<?= base_url()?>home/podologia"><img class="img-responsive" src="<?=base_url()?>plantillas/images/services/podologia.png"></a>
                     </div>
                     <div class="media-body">
                         <h3 class="media-heading">Podolog&iacute;a</h3>
@@ -44,7 +44,7 @@
             <div class="col-sm-6 col-md-4">
                 <div class="media services-wrap wow fadeInDown">
                     <div class="pull-left">
-                        <img class="img-responsive" src="<?=base_url()?>/plantillas/images/services/alquiler.png">
+                        <a href="<?= base_url()?>home/tienda"><img class="img-responsive" src="<?=base_url()?>/plantillas/images/services/alquiler.png"></a>
                     </div>
                     <div class="media-body">
                         <h3 class="media-heading">Alquiler</h3>
@@ -56,7 +56,7 @@
             <div class="col-sm-6 col-md-4">
                 <div class="media services-wrap wow fadeInDown">
                     <div class="pull-left">
-                        <img class="img-responsive" src="<?=base_url()?>/plantillas/images/services/ortesis.png">
+                        <a href="<?= base_url()?>home/tienda"><img class="img-responsive" src="<?=base_url()?>/plantillas/images/services/ortesis.png"></a>
                     </div>
                     <div class="media-body">
                         <h3 class="media-heading">Venta de ortesis</h3>
@@ -68,7 +68,7 @@
             <div class="col-sm-6 col-md-4">
                 <div class="media services-wrap wow fadeInDown">
                     <div class="pull-left">
-                        <img class="img-responsive" src="<?=base_url()?>/plantillas/images/services/plantillas.png">
+                        <a href="<?= base_url()?>home/tienda"><img class="img-responsive" src="<?=base_url()?>/plantillas/images/services/plantillas.png"></a>
                     </div>
                     <div class="media-body">
                         <h3 class="media-heading">Confección</h3>

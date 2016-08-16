@@ -11,7 +11,11 @@
       <div class="row">
 
           <form class="pre-cita " action="index.html" method="post">
-
+              <div class="row">
+                <div class="col-sm-12">
+                  <h2><span class="fa fa-leaf"></span> DATOS DE SU CITA</h2>
+                </div>
+              </div>
               <div class="row">
                 <div class="col-sm-10">
                   <div class="input-group " >
@@ -38,28 +42,44 @@
                 </div>
               </div>
               <br>
-
               <div class="row">
-                <div class='col-sm-10' >
+                <div class="col-sm-12">
+                  <h2><span class="fa fa-leaf"></span> DATOS PERSONALES</h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class='col-sm-5' >
                     <div class="input-group " >
                           <span  class= "input-group-addon input-modal" id= "basic-addon1" ><span class=" fa fa-user"></span></span>
-                          <input  type= "text"  name="paciente" class= "form-control"  placeholder= "Nombres y Apellidos"  aria-describedby= "basic-addon1" required="required">
+                          <input  type= "text"  name="nombre" class= "form-control"  placeholder= "Nombres"  aria-describedby= "basic-addon1" required="required">
+                   </div>
+                </div>
+                <div class='col-sm-5' >
+                    <div class="input-group " >
+                          <span  class= "input-group-addon input-modal" id= "basic-addon1" ><span class=" fa fa-user"></span></span>
+                          <input  type= "text"  name="apellidos" class= "form-control"  placeholder= "Apellidos"  aria-describedby= "basic-addon1" required="required">
                    </div>
                 </div>
               </div>
               <br>
 
               <div class="row">
-                <div class='col-sm-6'>
+                <div class='col-sm-5'>
                   <div class="input-group " >
                         <span  class= "input-group-addon input-modal" id= "basic-addon1" ><span class=" fa fa-at"></span></span>
                         <input  type= "email"  name="correo" class= "form-control"  placeholder= "Correo"  aria-describedby= "basic-addon1" required="required">
                  </div>
                 </div>
-                <div class='col-sm-4'>
+                <div class='col-sm-3'>
                   <div class="input-group " >
                         <span  class= "input-group-addon input-modal" id= "basic-addon1" ><span class=" fa fa-phone"></span></span>
-                        <input  type= "text"  name="telefono" class= "form-control"  placeholder= "Telefono"  aria-describedby= "basic-addon1" required="required">
+                        <input  type= "text"  name="celular" class= "form-control"  placeholder= "Celular"  aria-describedby= "basic-addon1" required="required">
+                 </div>
+                </div>
+                <div class='col-sm-2'>
+                  <div class="input-group " >
+                        <span  class= "input-group-addon input-modal" id= "basic-addon1" ><span class=" fa fa-phone"></span></span>
+                        <input  type= "text"  name="telefono" class= "form-control"  placeholder= "Telefono"  aria-describedby= "basic-addon1">
                  </div>
                 </div>
               </div>

@@ -4,10 +4,30 @@
  */
 class Mhorario extends CI_Model
 {
+  public function Insertar($value='')
+  {
+    if($value != null){
+          $data = array(
+                'dia' => $value['dia'],
+                'hora_inicial' => $value['inicio'],
+                'hora_final' => $value['fin']
+
+          );
+          $q=$this->db->insert('horario_dia', $data);
+          $idHd=$this->db->insert_id();
+          $horario=array(
+                      'idTrabajador'=>$value['medico'],
+                      'idHorario_dia'=>$idHd
+                );
+                $this->db->insert('horario', $horario);
+          }
+
+
+  }
 
   public function mostrarByEspecialidad($value='')
   {
-    $this->db->select("t.idTrabajador,hd.dia");//t.nombre,t.apPaterno,t.apMaterno,t.foto,e.descripcion
+    $this->db->select("t.idTrabajador,hd.dia,hd.hora_inicial,hd.hora_final");//t.nombre,t.apPaterno,t.apMaterno,t.foto,e.descripcion
     $this->db->distinct();
     $this->db->from("trabajador t");
     $this->db->join('list_especialidad l', ' t.idTrabajador =l.idTrabajador','INNER');

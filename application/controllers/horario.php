@@ -12,6 +12,13 @@ class Horario extends CI_Controller
     $this->load->model(array('mtrabajador'));
   }
 
+  public function Registrar()
+  {
+    $horario=$this->input->post();
+    $this->mhorario->insertar($horario);
+    header("Location: " . base_url(). "administrador/NuevoHorario");
+  }
+
   public function mostrarByEspecialidad()
   {
     $id=$this->input->post('idEspecialidad');

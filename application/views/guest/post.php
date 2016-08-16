@@ -9,7 +9,7 @@
 
     <h3></h3>
   </div>
-  <div class="row" id="post">
+  <div class="row" >
   <?php
   foreach ($consulta as $fila) {
 
@@ -26,41 +26,10 @@
          </section>
    <?php
   }
-   ?>
+ ?>
 
   <?php echo $pagination ?>
   </div>
 </div>
 </section>
 <br>
-<script type="text/javascript">
-$(document).ready(function(){
-  $("#pagination").on("click","li",function(){
-      var i=$(this);
-      var c=$("#post");
-      var request;
-      alert(i.text());
-      if(request==true){
-        request.abort();
-      }
-      request = $.ajax({
-      url:"<?php  echo base_url('home/post')?>",
-      type:"Post",
-       dataType: "json",
-      data:"id=" +id
-      });
-
-      request.done(function (response,textStatus,jqXHR) {
-            c.html("");
-            for(var i=0, len=response.length; i<len; i++) {
-                 var opt = opt + "<option value="+response[i].idMaterial+">"+ response[i].nombre+" "+response[i].medida+"</option>";
-            }
-          $("#idMaterial").html(opt);
-      });
-      request.fail(function (jqXHR,textStatus,thrown) {
-            console.log("Erros :" + textStatus);
-      });
-
-  });
-});
-</script>

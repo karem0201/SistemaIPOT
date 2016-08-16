@@ -13,7 +13,7 @@
             </div>
 
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 cuadro" >
 
           </div>
         </div>

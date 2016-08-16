@@ -54,7 +54,23 @@ class Mtrabajador extends CI_Model
     return $q->result();
   }
 
+  public function medicoByHorario($dia='',$hora='')
+  {
+    if($dia<>''and $hora<>'')
+    {
+      $this->db->select("t.idTrabajador,t.nombre,t.apPaterno,t.foto,t.apMaterno,hd.hora_inicial,hd.hora_final");//t.nombre,t.apPaterno,t.apMaterno,t.foto,e.descripcion
+      $this->db->distinct();
+      $this->db->from("horario_dia hd");
+      $this->db->where('hd.dia', $dia);
+      $this->db->where('hd.hora_inicial<=', $hora);
+      $this->db->where('hd.hora_final>', $hora);
+      $this->db->join("horario h","h.idHorario_dia=hd.idHorario_dia");
+      $this->db->join("trabajador t","h.idTrabajador=t.idtrabajador");
 
+      $q = $this->db->get();
+      return $q->result();
+    }
+  }
 }
 
  ?>

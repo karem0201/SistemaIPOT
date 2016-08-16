@@ -56,11 +56,10 @@ class Post extends CI_Model
   }
  public function get_pagination($num_per_page)
  {
-   $this->db->select('');
-   $this->db->from('usuario u');
-   $this->db->join('post p', ' u.idUsuario = p.autorId ');
-   $this->db->join('trabajador t', ' t.idUsuario = u.idUsuario ');
-    $q = $this->db->get('post',$num_per_page,$this->uri->segment(3));
+   $this->db->select('p.subdescripcion,t.nombre,p.imagen,t.nombreAb');
+   $this->db->from('post p');
+   $this->db->join('trabajador t', ' p.autorId = t.idTrabajador','INNER');
+   $q = $this->db->get('post',2,0);
    return $q->result();
  }
 

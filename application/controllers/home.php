@@ -32,10 +32,10 @@ class  Home extends CI_Controller
     $this->load->view("/Guest/slider",$data);
 
     $this->load->library('pagination');
-    $config [ 'base_url' ]  = "#";
+    $config [ 'base_url' ]  = "home/index";
     $config [ 'total_rows' ]  =  $this->post->num_post() ;
     $config [ 'per_page' ]  =  2 ;
-      //$config [ 'uri_segment' ]  =  3;
+    $config [ 'uri_segment' ]  =  3;
     $config [ 'num_links' ]  =  10;
     $Config [ 'use_page_numbers'] = true;
 
@@ -61,13 +61,14 @@ class  Home extends CI_Controller
     $this->pagination->initialize($config);
     $result = $this->post->get_pagination($config['per_page']);
     //echo json_encode($result);
-
     $this->load->view("/Guest/testimonial");
     $data['consulta'] =$result;
     $data['pagination'] =$this->pagination->create_links();
     $this->load->view("/Guest/post",$data);
     $this->load->view("/Guest/container",$data);
     $this->load->view("/Guest/servicios",$data);
+    $this->load->view("/Guest/feature",$data);
+    $this->load->view("/Guest/partner",$data);
     $this->load->view("/Guest/footer",$data);
 
   }
@@ -106,7 +107,7 @@ $config['num_tag_close'] = '</li>';
 
 $this->pagination->initialize($config);
 $result = $this->post->get_pagination($config['per_page']);
-echo json_encode($result);
+//echo json_encode($result);
 
 }
 

@@ -15,7 +15,7 @@
     <link href="<?=base_url()?>/plantillas/css/animate.min.css" rel="stylesheet">
     <link href="<?=base_url()?>/plantillas/css/prettyPhoto.css" rel="stylesheet">
     <link href="<?=base_url()?>/plantillas/css/main.css" rel="stylesheet">
-    <link href="<?=base_url()?>/plantillas/css/responsive.css" rel="stylesheet">    
+    <link href="<?=base_url()?>/plantillas/css/responsive.css" rel="stylesheet">
     <link href="<?=base_url()?>/plantillas/css/bootstrap-datepicker.css" rel="stylesheet">
 
 
@@ -31,6 +31,6 @@
     <link rel="apple-touch-icon-precomposed" href="<?=base_url()?>/plantillas/images/ico/apple-touch-icon-57-precomposed.png">
 
 
-    <script src="<?=base_url()?>/plantillas/js/jquery.js"></script>
+    
 
 </head><!--/head-->
