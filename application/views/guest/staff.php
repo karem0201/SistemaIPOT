@@ -4,10 +4,14 @@
   </div>
     <div class="container">
         <div class="row">
+          <div class="titulo">
+              <h1>NUESTROS MEDICOS<h1>
+              <h2>Separa tu cita llamando al  (01) 224 2224 anexo 4070 o <a href="<?= base_url()?>cita" class="btn btn-info" name="button">Vía Web</a></h2>
 
+          </div>
+          <h2>ENCUENTRA TU MEDICO ESPECIALISTA</h2>
             <div class="col-sm-4 wow fadeInDown">
                 <div class="accordion">
-                    <h2>Opciones de busqueda</h2>
                     <div class="panel-group" id="accordion1">
                       <div class="panel panel-default">
                         <div class="panel-heading active">
@@ -44,23 +48,6 @@
                         </div>
                       </div>
 
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <h3 class="panel-title">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo1">
-                              Ordenar por
-                              <i class="fa fa-angle-right pull-right"></i>
-                            </a>
-                          </h3>
-                        </div>
-                        <div id="collapseTwo1" class="panel-collapse collapse">
-                          <div class="panel-body">
-                            <p>Apellidos (A-Z)</p>
-                            <p>Apellidos (Z-A)</p>
-                            <p>Sexo</p>
-                          </div>
-                        </div>
-                      </div>
 
                       <div class="panel panel-default">
                         <div class="panel-heading">
@@ -94,8 +81,6 @@
             </div>
 
             <div class="col-sm-8 wow fadeInDown">
-              <h2 style="padding-bottom:15px; text-align:center;">Nuestros m&eacute;dicos</h2>
-
               <div class="row" id="content-medico">
                 <?php foreach ($medicos as $key){ ?>
                   <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 medico" >
@@ -215,7 +200,6 @@ $(document).ready( function() {
                               content = content + '<a data-toggle="modal" data-target="#horario"><span class="fa fa-eye" ></span>Ver horario</a>';
                           content = content + '</div>';
                           content = content + '</div>';
-
                       }
 
                       divContent.append(content);

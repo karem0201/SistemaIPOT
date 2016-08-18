@@ -7,6 +7,7 @@
       animation: fadeInUp 400ms;
   }
 
+
   #portfolio .row {
     margin-left: -10px;
     margin-right: -10px;
@@ -17,6 +18,7 @@
 @media (min-width: 992px) and (max-width: 1199px) {
 
  /* Make Navigation Toggle on Desktop Hover */
+
   .dropdown:hover .dropdown-menu {
       display: block;
       -webkit-animation: fadeInUp 400ms;
@@ -30,6 +32,7 @@
   .navbar-collapse {
     padding-left: 0;
     padding-right: 0;
+
 
   }
 
@@ -99,6 +102,8 @@
 /* sm */
 @media (min-width: 768px) and (max-width: 991px) {
   /* Make Navigation Toggle on Desktop Hover */
+
+
   .dropdown:hover .dropdown-menu {
       display: block;
       -webkit-animation: fadeInUp 400ms;
@@ -112,7 +117,7 @@
   }
 
   .navbar-nav > li {
-    margin-left: 0;
+    margin-left: 1px;
   }
 
 
@@ -189,8 +194,9 @@
     margin-bottom: 1px;
 
   }
-
-
+  .navbar-brand > img{
+        height: 40px;
+  }
 
 }
 
@@ -198,6 +204,7 @@
 @media (max-width: 767px) {
   .container > .navbar-header, .container > .navbar-collapse{
     margin-left: 10px;
+
   }
 
   .top-number{
@@ -233,18 +240,7 @@
   margin-top: 60px;
 }
 
-.cent-tel{
-  margin-top:20px;
-}
 
-  .cent-tel i, .cent-tel span{
-    font-size: 14px;
-  }
-
-
-  .cent-tel p{
-    font-size: 20px;
-  }
 
   .feature-wrap h2,
   .single-services h2 {
@@ -355,4 +351,19 @@
 .spc{
   width: 100%;
 }
+.cent-tel{
+
+}
+
+  .cent-tel i{
+    font-size: 42px;
+    }
+  .cent-tel span{
+    font-size: 20px;
+  }
+
+
+  .cent-tel p{
+    font-size: 18px;
+  }
 }

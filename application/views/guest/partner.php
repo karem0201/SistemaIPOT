@@ -3,17 +3,16 @@
 <section id="partner">
     <div class="container">
         <div class="center wow fadeInDown">
-            <h2>Our Partners</h2>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+            <h2>ENCUENTRANOS TAMBIEN</h2>
+            <p class="lead">Buscamos mantenerte informado <br> </p>
         </div>
 
         <div class="partners">
             <ul>
-                <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" src="<?=base_url()?>/plantillas/images/partners/partner1.png"></a></li>
+              <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" src="<?=base_url()?>/plantillas/images/partners/partner4.png"></a></li>
+              <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" src="<?=base_url()?>/plantillas/images/partners/partner1.png"></a></li>
                 <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms" src="<?=base_url()?>/plantillas/images/partners/partner2.png"></a></li>
                 <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms" src="<?=base_url()?>/plantillas/images/partners/partner3.png"></a></li>
-                <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms" src="<?=base_url()?>/plantillas/images/partners/partner4.png"></a></li>
-                <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1500ms" src="<?=base_url()?>/plantillas/images/partners/partner5.png"></a></li>
             </ul>
         </div>
     </div><!--/.container-->
@@ -25,11 +24,11 @@
             <div class="col-sm-8">
                 <div class="media contact-info wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
                     <div class="pull-left">
-                        <i class="fa fa-phone"></i>
+                        <i class="fa fa-phone" style="font-size:48px;"></i>
                     </div>
                     <div class="media-body">
-                        <h2>Have a question or need a custom quote?</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation +0123 456 70 80</p>
+                        <h2>¿TIENES ALGUNA INQUIETUD?</h2>
+                        <p>Contactanos y te ayudaremos  +01 224 2224 anexo 4070</p>
                     </div>
                 </div>
             </div>
@@ -77,7 +76,7 @@
                     <ul>
                         <li><a href="#">Fractura de Calc&aacute;neo</a></li>
                         <li><a href="#">Bienal 2016</a></li>
-                        <li><a href="#">Bienal 2015</a></li>                        
+                        <li><a href="#">Bienal 2015</a></li>
                     </ul>
                 </div>
             </div><!--/.col-md-3-->

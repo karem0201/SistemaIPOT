@@ -4,7 +4,7 @@
   <div id="page-wraper" class="container">
     <div class="titulo">
         <h1>Podolog&iacute;a IPOT- Clínica Ricardo Palma</h1>
-        <h2>Separa tu cita: (01) 225-2255</h2>
+        <h2>Separa tu cita: (01) 224 2224 anexo 4070</h2>
     </div>
     <div class="row ser-podologia">
       <div class="col-md-3">

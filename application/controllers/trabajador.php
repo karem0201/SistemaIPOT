@@ -21,6 +21,7 @@ class trabajador extends CI_Controller
   public function medicoByEspecialidad()
   {
     $id = $this->input->post('opt');
+
     $q= $this->mtrabajador->listEspecialidad($id);
     echo json_encode($q);
   }
@@ -29,7 +30,8 @@ class trabajador extends CI_Controller
   {
     $dia = $this->input->post('dia');
     $hora = $this->input->post('hora');
-    $q= $this->mtrabajador->medicoByHorario($dia,$hora);
+    $idEsp = $this->input->post('idEspecialidad');
+    $q= $this->mtrabajador->medicoByHorario($dia,$hora,$idEsp);
     echo json_encode($q);
   }
 }

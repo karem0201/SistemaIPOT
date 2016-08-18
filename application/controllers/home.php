@@ -29,7 +29,7 @@ class  Home extends CI_Controller
     $this->load->view("/Guest/head",$data);
     $this->load->view("/Guest/header",$data);
     $this->load->view("/Guest/nav",$data);
-    $this->load->view("/Guest/slider",$data);
+    $this->load->view("/Guest/slider1",$data);
 
     $this->load->library('pagination');
     $config [ 'base_url' ]  = "home/index";
@@ -62,12 +62,12 @@ class  Home extends CI_Controller
     $result = $this->post->get_pagination($config['per_page']);
     //echo json_encode($result);
     $this->load->view("/Guest/testimonial");
+    $this->load->view("/Guest/servicios",$data);
     $data['consulta'] =$result;
     $data['pagination'] =$this->pagination->create_links();
     $this->load->view("/Guest/post",$data);
     $this->load->view("/Guest/container",$data);
-    $this->load->view("/Guest/servicios",$data);
-    $this->load->view("/Guest/feature",$data);
+
     $this->load->view("/Guest/partner",$data);
     $this->load->view("/Guest/footer",$data);
 
@@ -110,6 +110,17 @@ $result = $this->post->get_pagination($config['per_page']);
 //echo json_encode($result);
 
 }
+
+  public function contactanos()
+  {
+    $data = array('title'=>'Cont&aacute;ctanos | IPOT-CRP');
+    $this->load->view("/Guest/head",$data);
+    $this->load->view("/Guest/header",$data);
+    $this->load->view("/Guest/nav",$data);
+    $this->load->view("/Guest/contactanos",$data);
+    $this->load->view("/Guest/servicios",$data);
+    $this->load->view("/Guest/footer",$data);
+  }
 
   public function historia()
   {
@@ -161,6 +172,27 @@ $result = $this->post->get_pagination($config['per_page']);
     $this->load->view("/Guest/nav",$data);
     $this->load->view("/Guest/podologia",$data);
     $this->load->view("/Guest/servicios",$data);
+    $this->load->view("/Guest/footer",$data);
+  }
+
+  public function siteweb()
+  {
+    $data = array('title'=>'Mapa del sitio | IPOT-CRP');
+    $this->load->view("/Guest/head",$data);
+    $this->load->view("/Guest/header",$data);
+    $this->load->view("/Guest/nav",$data);
+    $this->load->view("/Guest/siteweb",$data);
+    $this->load->view("/Guest/servicios",$data);
+    $this->load->view("/Guest/footer",$data);
+  }
+
+  public function Desarrollo()
+  {
+    $data = array('title'=>'Mapa del sitio | IPOT-CRP');
+    $this->load->view("/Guest/head",$data);
+    $this->load->view("/Guest/header",$data);
+    $this->load->view("/Guest/nav",$data);
+    $this->load->view("/Guest/Desarrollo",$data);
     $this->load->view("/Guest/footer",$data);
   }
 }

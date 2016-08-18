@@ -1,10 +1,10 @@
 <!-- publicacion de post -->
 <!--about us-->
-<section class="aboutus">
+<section class="aboutus" id="noticias">
 <div class="container">
   <div class="center wow fadeInDown">
     <div class="linear-re ">
-        <h2>Blogs Médicos</h2>
+        <h2>Publicaciones m&eacute;dicas</h2>
     </div>
 
     <h3></h3>

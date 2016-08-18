@@ -1,4 +1,4 @@
-<div class="modal fade" id="asistentecita" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class=" " id="asistentecita" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -492,12 +492,12 @@ $(document).ready( function() {
             if(request==true){
               request.abort();
             }
-
+            idEsp = especialidad.val();
             request = $.ajax({
             url:"<?php  echo base_url('trabajador/medicoByHD')?>",
             type:"Post",
             dataType: "json",
-            data:{dia: diaBusq, hora:horaBusq}
+            data:{dia: diaBusq, hora:horaBusq, idEspecialidad:idEsp}
             });
 
            request.done(function (response,textStatus,jqXHR) {

@@ -10,7 +10,7 @@
         <div class="col-md-3" style="padding:0;">
           <div class="publisher sticky-publisher" >
             <h2>Hagamos que su incomodidad no se prolongue más</h2>
-            <p>Nuestra asesora de ventas lo ayudará a conseguir el producto necesario para sobrellevar su trauma, atendiendo la receta de su m&eacute;dico.</p>
+            <p>Nuestra asesora de ventas lo ayudará a conseguir el producto necesario para sobrellevar su , atendiendo su receta</p>
             <h2>Consulte nuestro stock</h2><p><b class="fa fa-phone"> 989 269 354</b></p>
           </div>
         </div>

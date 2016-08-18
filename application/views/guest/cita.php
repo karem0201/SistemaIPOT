@@ -9,7 +9,7 @@
       </div>
 
       <div class="row">
-
+          
           <form class="pre-cita " action="index.html" method="post">
               <div class="row">
                 <div class="col-sm-12">
@@ -29,10 +29,10 @@
                       ?>
                     </select>
                   </div>
-                  <p>Si no sabe que medico seleccionar use el boton de asistente</p>
+                  <p>Si no sabe que medico seleccionar use el boton de ayuda</p>
                 </div>
                 <div class="col-sm-2">
-                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#asistentecita"><span class="fa fa-question-circle" ></span> Asistente</button>
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#asistentecita"><span class="fa fa-question-circle" ></span> Ayuda</button>
                 </div>
               </div>
 
