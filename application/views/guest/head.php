@@ -18,6 +18,8 @@
     <link href="<?=base_url()?>/plantillas/css/responsive.css" rel="stylesheet">
     <link href="<?=base_url()?>/plantillas/css/bootstrap-datepicker.css" rel="stylesheet">
 
+    <link href="<?=base_url()?>plantillas/css/sb-admin-2.css" rel="stylesheet">
+
 
 
     <!--[if lt IE 9]>

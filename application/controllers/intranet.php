@@ -13,9 +13,10 @@ class Intranet extends CI_Controller
 
       public function index()
       {
-            $this->load->view('guest/head');
+            $data = array('title'=>'Intranet | IPOT-CRP');
+            $this->load->view('guest/head',$data);
             $this->load->view('guest/header');
-            $this->load->view('guest/nav');
+            $this->load->view('vintranet/nav');
             if($this->session->userdata('login')){
                   $this->load->model(array('muser'));
                   $result=$this->muser->getPermisos($this->session->userdata('idTipUsu'));

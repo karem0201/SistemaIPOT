@@ -306,16 +306,30 @@ input.search-form:hover {
 }
 
 
-.navbar-inverse .navbar-nav > li > a {
+.navbar-inverse .navbar-nav > li > a  {
   padding: 5px 6px;
   margin: 0;
   /*border: 2px solid #3ba267;*/
-  border-radius: 50px;
+  /*border-radius: 50px;*/
     -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 2.125);
     -moz-box-shadow: 0 3px 10px rgba(0, 0, 0, 2.125);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 2.125);
   color:black;
-  background-color: rgba(255, 255, 255, 0.58);
+  background-color: rgba(255, 255, 255, 0.75);
+  line-height: 24px;
+  display: inline-block;
+}
+
+.navbar-inverse .navbar-nav > li > i  {
+  padding: 5px 6px;
+  margin: 0;
+  /*border: 2px solid #3ba267;*/
+  /*border-radius: 50px;*/
+    -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 2.125);
+    -moz-box-shadow: 0 3px 10px rgba(0, 0, 0, 2.125);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 2.125);
+  color:black;
+  background-color: rgba(255, 255, 255, 0.75);
   line-height: 24px;
   display: inline-block;
 }
@@ -3157,11 +3171,26 @@ select{
   text-transform: capitalize;
 }
 
+/************************
+******* Citas      ******
+*************************/
+#asistentecita{
+  padding: 1% 20%;
+}
+
+#asistentecita .modal-header{
+  background-color: #8bc34a;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.58);
+}
+
+#asistentecita .modal-header h4{
+  color: white;
+}
+
 .hora-active {
   background-color: #8bc34a;
   border: 1px solid #fff ;
   cursor:pointer;
-
 }
 
 

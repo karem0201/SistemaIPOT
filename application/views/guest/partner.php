@@ -11,8 +11,8 @@
             <ul>
               <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" src="<?=base_url()?>/plantillas/images/partners/partner4.png"></a></li>
               <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" src="<?=base_url()?>/plantillas/images/partners/partner1.png"></a></li>
-                <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms" src="<?=base_url()?>/plantillas/images/partners/partner2.png"></a></li>
-                <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms" src="<?=base_url()?>/plantillas/images/partners/partner3.png"></a></li>
+              <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms" src="<?=base_url()?>/plantillas/images/partners/partner2.png"></a></li>
+              <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms" src="<?=base_url()?>/plantillas/images/partners/partner3.png"></a></li>
             </ul>
         </div>
     </div><!--/.container-->

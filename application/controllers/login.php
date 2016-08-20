@@ -7,19 +7,19 @@ class Login extends CI_Controller
 
   public function index()
   {
-    $email = $this->input->post('email');
+    $nickname = $this->input->post('nickname');
     $password = $this->input->post('password');
 
     $this->load->model('muser');
-    $fila = $this->muser->getUser($email);
-
+    $fila = $this->muser->getUser($nickname);
+    echo $fila .$nickname. $password;
     if($fila != null)
     {
       if($fila->password == $password)
       {
             $this->load->model('muser');
         $Usuario =array(
-              'email' => $fila->email,
+              'nickname' => $fila->nickname,
               'idUsu' =>$fila->idUsuario,
               'login'=>true,
               'idTipUsu'=>$fila->idTipoUsuario

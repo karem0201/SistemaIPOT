@@ -1,3 +1,5 @@
+<section id="login">
+
     <div class="container">
           <br>
         <div class="row">
@@ -10,8 +12,9 @@
                         <div >
                               <?php
                                   echo form_open('login/index');
-                                  $attribs = array('placeholder' => 'E-mail');
-                                  echo form_input_email('email','',$attribs);
+                                  ?>
+                                  <input type="text" class="form-control" name="nickname" value="" placeholder="nickname">
+                                  <?php
                                   $attribs = array('placeholder' => 'contraseña');
                                   echo form_input_password('password', '',$attribs);
                                   echo form_submit('Iniciar Sesión');
@@ -24,3 +27,4 @@
             </div>
         </div>
     </div>
+</section>

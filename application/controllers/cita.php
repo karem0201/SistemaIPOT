@@ -24,6 +24,7 @@ class Cita extends CI_Controller
     $data=array('medicos'=>$q,'especialidad'=>$e);
     $this->load->view("/Guest/asistenteCita",$data);
     $this->load->view("/Guest/cita",$data);
+    $this->load->view("/Guest/Testimonial",$data);
     $this->load->view("/Guest/footer");
   }
 

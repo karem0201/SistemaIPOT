@@ -71,11 +71,9 @@ jQuery(function($) {'use strict',
 
 	//pegar el navegador
 	var $nav = $('#navegador');
-	var $navTop = $nav.offset().top;
 
 	var pegarNav = function(){
 		var $scrollTop = $(window).scrollTop();
-
 		if($scrollTop >= 41){
 			$nav.addClass('sticky')
 		}

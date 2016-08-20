@@ -15,21 +15,21 @@
             <ul class="nav navbar-nav" >
                 <li class="active"><a href="<?= base_url()?>"><spam class="fa fa-home"></spam> Inicio</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Nosotros <i class="fa fa-angle-down"></i></a>
+                    <a href="<?= base_url()?>home/historia">Nosotros</a><i class="fa fa-angle-down "  class="dropdown-toggle" data-toggle="dropdown"></i>
                     <ul class="dropdown-menu">
                         <li><a href="<?= base_url()?>/home/historia">Historia</a></li>
                         <li><a href="<?= base_url()?>/home/Desarrollo">Testimonios</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Especialidades <i class="fa fa-angle-down"></i></a>
+                    <a href="<?= base_url()?>/home/Desarrollo" >Especialidades </a><i class="fa fa-angle-down" class="dropdown-toggle" data-toggle="dropdown"></i>
                     <ul class="dropdown-menu">
                         <li><a href="<?= base_url()?>home/staff">Staff M&eacute;dico</a></li>
                         <li><a href="<?= base_url()?>/home/Desarrollo">Preg&uacute;ntale a tu m&eacute;dico</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Servicios <i class="fa fa-angle-down"></i></a>
+                    <a href="#" >Servicios</a><i class="fa fa-angle-down" class="dropdown-toggle" data-toggle="dropdown"></i>
                     <ul class="dropdown-menu">
                         <li><a href="<?= base_url()?>home/tienda">Tienda</a></li>
                         <li><a href="<?= base_url()?>home/podologia">Podolog&iacute;a</a></li>
@@ -38,7 +38,7 @@
                 <li><a href="<?= base_url()?>/home/Desarrollo">Traumatolog&iacute;a al d&iacute;a</a></li>
                 <li><a href="#noticias">Noticias</a></li>
                 <li class="dropdown">
-                    <a href="<?= base_url()?>home/contactanos" class="dropdown-toggle" data-toggle="dropdown">Contacto <i class="fa fa-angle-down"></i></a>
+                    <a href="<?= base_url()?>home/contactanos" class="dropdown-toggle" data-toggle="dropdown">Contacto</a><i class="fa fa-angle-down"></i>
                     <ul class="dropdown-menu">
                         <li><a href="<?= base_url()?>/home/Desarrollo">Preg&uacute;ntale a tu m&eacute;dico</a></li>
                         <li><a href="<?= base_url()?>cita">Separa tu cita</a></li>
