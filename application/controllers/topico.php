@@ -10,17 +10,18 @@ class Topico extends CI_Controller
       parent::__construct();
       $this->load->model(array('mtrabajador'));
       $this->load->model(array('mpermiso'));
-      $pase = false;
+
       if (!$this->session->userdata('login')){
             header("Location: " . base_url(). "intranet");
-      }    
+      }
 
     }
 
 
-    public function index()
+    public function consumo_medicinas()
     {
-          $this->load->view('vsoft_sop/head');
+          $data = array('title'=>'TOPICO | IPOT-CRP');
+          $this->load->view('guest/head',$data);
           $this->load->view('guest/header');
           $this->load->model(array('muser'));
           $id =$this->session->userdata('idTipUsu');
@@ -29,9 +30,12 @@ class Topico extends CI_Controller
           $data=array('permiso'=>$result,'categoria'=>$cat);
           // $this->load->view('vsoft_sop/notificaciones',$data);
           $this->load->view('vintranet/metisMenu',$data);
-          $this->load->view('vtopico/resumen_materiales',$data);
+          $this->load->view('vintranet/nuevoPaciente',$data);
+          $this->load->view('vintranet/buscarPaciente',$data);
+          $this->load->view('vtopico/consumo_materiales',$data);
           $this->load->view('guest/footer');
     }
+
 
 }
 

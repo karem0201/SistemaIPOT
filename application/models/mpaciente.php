@@ -22,6 +22,28 @@ class Mpaciente extends CI_Model
               }
       }
 
+      public function buscarPaciente($value='')
+      {
+        if($value != null){
+
+              $apPaterno = $value['apPaterno'];
+              $apMaterno = $value['apMaterno'];
+              $nombre = $value['nombre'];
+              $dni = $value['dni'];
+
+
+              $this->db->select('*');
+              $this->db->from('paciente p');
+              $this->db->like('p.apPaterno',$apPaterno,'after');
+              $this->db->like('p.apMaterno',$apMaterno,'after');
+              $this->db->like('p.nombre',$nombre,'after');
+              $this->db->like('p.dni',$dni,'after');
+              $q=$this->db->get();
+              return $q->result();
+          }
+
+      }
+
       public function mostrar()
       {
             $q = $this->db->get('paciente');

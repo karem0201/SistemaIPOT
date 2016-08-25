@@ -1,15 +1,14 @@
 <!-- Footer -->
-<footer id="footer" class="midnight-blue">
-
-        <div class="row">
+<footer id="footer" >
+        <div class="row footer">
             <div class="col-sm-1">
 
             </div>
             <div class="col-sm-4 col-offset-sm-2">
-                <p>Calle Ricardo Angulo N° 180 - San Isidro - Lima</p>
-                <p>(01) 224 2224 Anexo 4070</p>
+                Calle Ricardo Angulo N° 180 - San Isidro - Lima <br>
+                (01) 224 2224 Anexo 4070
                 <p></p>
-                <br>Copyright &copy;2016: Instituto Peruano de Ortopedia y Traumatolog&iacute;a Cl&iacute;nica Ricardo Palma
+                Copyright &copy;2016:Instituto Peruano de Ortopedia y Traumatolog&iacute;a Cl&iacute;nica Ricardo Palma
 
             </div>
             <div class="col-sm-5">

@@ -16,9 +16,9 @@
     <link href="<?=base_url()?>/plantillas/css/prettyPhoto.css" rel="stylesheet">
     <link href="<?=base_url()?>/plantillas/css/main.css" rel="stylesheet">
     <link href="<?=base_url()?>/plantillas/css/responsive.css" rel="stylesheet">
-    <link href="<?=base_url()?>/plantillas/css/bootstrap-datepicker.css" rel="stylesheet">
 
     <link href="<?=base_url()?>plantillas/css/sb-admin-2.css" rel="stylesheet">
+      <link href="<?=base_url()?>/plantillas/css/bootstrap-datepicker.css" rel="stylesheet">
 
 
 
@@ -26,7 +26,7 @@
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="<?=base_url()?>/plantillas/images/logoIpot70x70.png">
+    <link rel="shortcut icon" href="<?=base_url()?>/plantillas/images/logoIpot70.png">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?=base_url()?>/plantillas/images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?=base_url()?>/plantillas/images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?=base_url()?>/plantillas/images/ico/apple-touch-icon-72-precomposed.png">

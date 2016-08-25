@@ -25,7 +25,7 @@
                     </div>
                     <div class="media-body">
                         <h3 class="media-heading">Cirugía</h3>
-                        <p>Con convenio con la Clínica Ricardo Palma.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
                     </div>
                 </div>
             </div>

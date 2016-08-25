@@ -8,7 +8,7 @@
       </div>
       <div class="row">
         <div class="col-md-3" style="padding:0;">
-          <div class="publisher sticky-publisher" >
+          <div class="publisher sticky-publisher sombra-curva" >
             <h2>Hagamos que su incomodidad no se prolongue más</h2>
             <p>Nuestra asesora de ventas lo ayudará a conseguir el producto necesario para sobrellevar su , atendiendo su receta</p>
             <h2>Consulte nuestro stock</h2><p><b class="fa fa-phone"> 989 269 354</b></p>

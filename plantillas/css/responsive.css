@@ -204,11 +204,10 @@
 @media (max-width: 767px) {
   .container > .navbar-header, .container > .navbar-collapse{
     margin-left: 10px;
-
   }
 
   .top-number{
-    font-size: 14px;
+    font-size: 14pt;
 
   }
 
@@ -336,24 +335,37 @@
 }
 
 /* XS Portrait */
-@media (max-width: 480px) {
+@media (max-width: 580px) {
+  .top-number{
+    font-size: 8pt;
+    line-height: 18px;
+
+  }
+  ul.social-share li a {
+    margin: 1px;
+    height: 12pt;
+    width: 12pt;
+    font-size: 8pt;
+    line-height: 18px;
+  }
+
   .medico{
+      width: 100%;
+    }
+  .medico .imagen{
+    width: 30%;
+  }
+
+  .medico .texto{
+    width: 70%;
+  }
+
+  .spc{
     width: 100%;
   }
-.medico .imagen{
-  width: 30%;
-}
-
-.medico .texto{
-  width: 70%;
-}
-
-.spc{
-  width: 100%;
-}
-.cent-tel{
-
-}
+  .cent-tel{
+    top:70%;
+  }
 
   .cent-tel i{
     font-size: 42px;

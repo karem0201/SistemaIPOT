@@ -74,7 +74,7 @@ jQuery(function($) {'use strict',
 
 	var pegarNav = function(){
 		var $scrollTop = $(window).scrollTop();
-		if($scrollTop >= 41){
+		if($scrollTop > 0){
 			$nav.addClass('sticky')
 		}
 		else {

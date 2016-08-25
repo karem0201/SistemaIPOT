@@ -79,15 +79,16 @@
             </div><!--/.item-->
 
         </div><!--/.carousel-inner-->
+        <div class="row col-xs-10 col-xs-offset-1 col-sm-6 col-md-6 col-lg-4 col-lg-offset-2 cent-tel">
+            <i class="fa fa-phone-square col-xs-2 col-sm-2 col-md-2 col-lg-2"></i>
+            <div class="col-xs-10 cols-sm-9 col-md-10 col-lg-10">
+              <span class="col-xs-12">Informes y citas :</span>
+              <p class='col-xs-12'>(01) 224 2224 Anexo 4070</p>
+            </div>
+        </div>
 
     </div><!--/.carousel-->
-    <div class="row col-xs-10 col-xs-offset-1 col-sm-6 col-md-6 col-lg-4 col-lg-offset-2 cent-tel">
-        <i class="fa fa-phone-square col-xs-2 col-sm-2 col-md-2 col-lg-2"></i>
-        <div class="col-xs-10 cols-sm-9 col-md-10 col-lg-10">
-          <span class="col-xs-12">Informes y citas :</span>
-          <p class='col-xs-12'>(01) 224 2224 Anexo 4070</p>
-        </div>
-    </div>
+
     <a class="left carousel-control  prev" href="#carousel-example-generic" data-slide="prev">
         <i class="fa fa-chevron-left"></i>
     </a>

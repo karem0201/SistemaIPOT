@@ -1,7 +1,7 @@
-<section id="history">
-  <div class="banner" style="background-image:url(<?=base_url()?>/plantillas/images/slider/traumatologos.png);">
+<div class="banner" style="background-image:url(<?=base_url()?>/plantillas/images/slider/traumatologos.png);">
 
-  </div>
+</div>
+<section id="history">
     <div class="container">
         <div class="row">
           <div class="titulo">
@@ -10,8 +10,8 @@
 
           </div>
           <h2>ENCUENTRA TU MEDICO ESPECIALISTA</h2>
-            <div class="col-sm-4 wow fadeInDown">
-                <div class="accordion">
+            <div class="col-sm-4 wow fadeInDown ">
+                <div class="accordion sombra-curva">
                     <div class="panel-group" id="accordion1">
                       <div class="panel panel-default">
                         <div class="panel-heading active">
@@ -73,9 +73,6 @@
                         </div>
 
                       </div>
-
-
-
                     </div><!--/#accordion1-->
                 </div>
             </div>

@@ -7,11 +7,11 @@ class Paciente extends CI_controller
       function __construct()
       {
             parent::__construct();
+            $this->load->model(array('mpaciente'));
       }
 
       public function registrar()
       {     $new = $this->input->post();
-            $this->load->model(array('mpaciente'));
             $q= $this->mpaciente->insertar($new);
 
             if($q){
@@ -29,6 +29,13 @@ class Paciente extends CI_controller
       //       $q= $this->mpaciente->mostrarNombres($searchTerm);
       //       return json_encode($q);
       // }
+      public function BuscarPaciente()
+      {
+        $pact = $this->input->post();
+        $q= $this->mpaciente->BuscarPaciente($pact);
+        echo json_encode($q);
+      }
+
 
       public function mostrarPacientes($value='')
       {

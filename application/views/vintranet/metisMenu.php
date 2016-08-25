@@ -39,6 +39,9 @@
                   </ul>
                   <!-- /.nav-second-level -->
               </li>
+              <li>
+                  <a href="<?= base_url()?>login/logout"><i class="fa fa-th-large fa-fw"></i>Cerrar Sesión</a>
+              </li>
             </ul>
         </div><!-- /.sidebar-collapse -->
       </div><!-- /.navbar-static-side -->
