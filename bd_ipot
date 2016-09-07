@@ -1,0 +1,916 @@
+-- phpMyAdmin SQL Dump
+-- version 4.5.1
+-- http://www.phpmyadmin.net
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 28-07-2016 a las 00:40:55
+-- Versión del servidor: 10.1.13-MariaDB
+-- Versión de PHP: 5.6.21
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `bd_ipot`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `atributo`
+--
+
+CREATE TABLE `atributo` (
+  `idAtributo` int(11) NOT NULL,
+  `idCirugia` int(11) NOT NULL,
+  `nombreAtr` varchar(20) NOT NULL,
+  `descAtr` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `atributo`
+--
+
+INSERT INTO `atributo` (`idAtributo`, `idCirugia`, `nombreAtr`, `descAtr`) VALUES
+(2, 1, 'estCarta', 'Carta de Garantía'),
+(3, 1, 'estConfPacte', 'Confirmación con el Pacte'),
+(4, 1, 'estIngMat', 'Internamiento de materiales');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `cirugia`
+--
+
+CREATE TABLE `cirugia` (
+  `idCirugia` int(11) NOT NULL,
+  `idPaciente` int(11) NOT NULL,
+  `fecProb` date NOT NULL,
+  `horaProb` time NOT NULL,
+  `fecReal` date NOT NULL,
+  `horaReal` time NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `cirugia`
+--
+
+INSERT INTO `cirugia` (`idCirugia`, `idPaciente`, `fecProb`, `horaProb`, `fecReal`, `horaReal`) VALUES
+(1, 1, '2016-06-22', '07:00:00', '0000-00-00', '00:00:00'),
+(2, 2, '2016-10-12', '17:30:00', '0000-00-00', '00:00:00'),
+(3, 3, '2016-07-21', '11:00:00', '0000-00-00', '00:00:00'),
+(4, 4, '2016-07-07', '14:30:00', '0000-00-00', '00:00:00'),
+(5, 6, '2016-08-01', '07:30:00', '0000-00-00', '00:00:00'),
+(6, 5, '2016-07-30', '20:00:00', '0000-00-00', '00:00:00'),
+(7, 2, '2017-02-01', '08:00:00', '0000-00-00', '00:00:00'),
+(8, 9, '2016-12-02', '20:00:00', '0000-00-00', '00:00:00'),
+(9, 9, '2016-12-02', '20:00:00', '0000-00-00', '00:00:00'),
+(10, 9, '2016-12-21', '20:30:00', '0000-00-00', '00:00:00'),
+(11, 2, '2016-12-02', '20:30:00', '0000-00-00', '00:00:00'),
+(12, 2, '2017-02-21', '19:30:00', '0000-00-00', '00:00:00'),
+(13, 2, '2017-02-21', '19:30:00', '0000-00-00', '00:00:00'),
+(14, 2, '2017-02-21', '19:30:00', '0000-00-00', '00:00:00'),
+(15, 2, '2017-02-21', '19:30:00', '0000-00-00', '00:00:00'),
+(16, 2, '2017-02-21', '19:30:00', '0000-00-00', '00:00:00'),
+(17, 2, '2017-02-21', '19:30:00', '0000-00-00', '00:00:00'),
+(18, 2, '2017-02-21', '19:30:00', '0000-00-00', '00:00:00'),
+(19, 2, '2017-02-21', '19:30:00', '0000-00-00', '00:00:00'),
+(20, 2, '2017-02-21', '19:30:00', '0000-00-00', '00:00:00'),
+(21, 2, '2017-02-21', '19:30:00', '0000-00-00', '00:00:00'),
+(22, 2, '2017-02-21', '19:30:00', '0000-00-00', '00:00:00'),
+(23, 2, '2017-02-21', '19:30:00', '0000-00-00', '00:00:00'),
+(24, 2, '2017-02-21', '19:30:00', '0000-00-00', '00:00:00'),
+(25, 2, '2017-02-21', '19:30:00', '0000-00-00', '00:00:00'),
+(26, 2, '2017-02-21', '19:30:00', '0000-00-00', '00:00:00'),
+(27, 2, '2017-02-21', '19:30:00', '0000-00-00', '00:00:00'),
+(28, 2, '2017-02-21', '19:30:00', '0000-00-00', '00:00:00'),
+(29, 2, '2017-02-21', '19:30:00', '0000-00-00', '00:00:00'),
+(30, 2, '2017-02-21', '19:30:00', '0000-00-00', '00:00:00'),
+(31, 2, '2017-02-21', '19:30:00', '0000-00-00', '00:00:00'),
+(32, 2, '2017-02-21', '19:30:00', '0000-00-00', '00:00:00'),
+(33, 2, '2017-02-21', '19:30:00', '0000-00-00', '00:00:00'),
+(34, 2, '2017-01-30', '14:30:00', '0000-00-00', '00:00:00'),
+(35, 2, '2017-01-30', '14:30:00', '0000-00-00', '00:00:00'),
+(36, 2, '2017-01-30', '14:30:00', '0000-00-00', '00:00:00'),
+(37, 2, '2017-01-30', '14:30:00', '0000-00-00', '00:00:00'),
+(38, 2, '2017-01-30', '14:30:00', '0000-00-00', '00:00:00'),
+(39, 2, '2017-01-30', '14:30:00', '0000-00-00', '00:00:00'),
+(40, 2, '2017-01-30', '14:30:00', '0000-00-00', '00:00:00'),
+(41, 2, '2017-01-30', '14:30:00', '0000-00-00', '00:00:00'),
+(42, 2, '2017-01-30', '14:30:00', '0000-00-00', '00:00:00'),
+(43, 2, '2017-01-30', '14:30:00', '0000-00-00', '00:00:00'),
+(44, 2, '2017-01-30', '14:30:00', '0000-00-00', '00:00:00'),
+(45, 2, '2017-01-30', '14:30:00', '0000-00-00', '00:00:00'),
+(46, 2, '2017-01-30', '14:30:00', '0000-00-00', '00:00:00'),
+(47, 2, '2017-01-30', '14:30:00', '0000-00-00', '00:00:00'),
+(48, 2, '2017-01-30', '14:30:00', '0000-00-00', '00:00:00'),
+(49, 2, '2017-01-30', '14:30:00', '0000-00-00', '00:00:00'),
+(50, 2, '2017-01-30', '14:30:00', '0000-00-00', '00:00:00'),
+(51, 2, '2017-01-30', '14:30:00', '0000-00-00', '00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `cita_v1`
+--
+
+CREATE TABLE `cita_v1` (
+  `idCita` int(11) NOT NULL,
+  `idMedico` int(11) NOT NULL,
+  `correo` int(11) NOT NULL,
+  `mensaje` int(11) NOT NULL,
+  `telefono` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `especialidad`
+--
+
+CREATE TABLE `especialidad` (
+  `idEspecialidad` int(11) NOT NULL,
+  `descripcion` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `especialidad`
+--
+
+INSERT INTO `especialidad` (`idEspecialidad`, `descripcion`) VALUES
+(1, 'PIE, TOBILLO Y MANO'),
+(2, 'MIEMBRO SUPERIOR'),
+(3, 'GENERAL'),
+(4, 'HOMBRO Y CODO');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `horario`
+--
+
+CREATE TABLE `horario` (
+  `idHorario` int(11) NOT NULL,
+  `idTrabajador` int(11) NOT NULL,
+  `idHorario_dia` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `horario`
+--
+
+INSERT INTO `horario` (`idHorario`, `idTrabajador`, `idHorario_dia`) VALUES
+(1, 4, 1),
+(2, 4, 2),
+(3, 4, 3),
+(4, 5, 4),
+(5, 5, 5),
+(6, 2, 6),
+(7, 4, 7);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `horario_dia`
+--
+
+CREATE TABLE `horario_dia` (
+  `idHorario_dia` int(11) NOT NULL,
+  `dia` varchar(20) NOT NULL,
+  `hora_inicial` time NOT NULL,
+  `hora_final` time NOT NULL,
+  `Turno` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `horario_dia`
+--
+
+INSERT INTO `horario_dia` (`idHorario_dia`, `dia`, `hora_inicial`, `hora_final`, `Turno`) VALUES
+(1, 'lunes', '08:30:00', '13:00:00', 'mañana'),
+(2, 'jueves', '15:00:00', '20:00:00', 'tarde'),
+(3, 'jueves', '08:30:00', '13:00:00', 'mañana'),
+(4, 'martes', '08:00:00', '12:00:00', 'mañana'),
+(5, 'miércoles', '08:00:00', '12:00:00', 'mañana'),
+(6, 'miércoles', '09:00:00', '11:00:00', 'mañana'),
+(7, 'miércoles', '15:00:00', '20:00:00', 'tarde');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `list_atributo`
+--
+
+CREATE TABLE `list_atributo` (
+  `idList_atributo` int(11) NOT NULL,
+  `idAtributo` int(11) NOT NULL,
+  `idCirugia` int(11) NOT NULL,
+  `estAtr` tinyint(1) NOT NULL,
+  `msAtr` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `list_atributo`
+--
+
+INSERT INTO `list_atributo` (`idList_atributo`, `idAtributo`, `idCirugia`, `estAtr`, `msAtr`) VALUES
+(2, 2, 1, 0, 'La carta esta en proceso de aprobacion'),
+(3, 3, 1, 0, 'Un día antes se llevará acabo via telefónica'),
+(4, 4, 1, 0, 'El material será ingresado a más tardar un dia antes'),
+(5, 2, 2, 1, 'La carta fue aprobada el 21/06/2016'),
+(6, 3, 2, 1, 'Se llama al pacte,y no presenta complicación en su internamiento'),
+(7, 4, 2, 1, 'El material fue ingresado 23/06/16 15:30');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `list_especialidad`
+--
+
+CREATE TABLE `list_especialidad` (
+  `idList_especialidad` int(11) NOT NULL,
+  `idTrabajador` int(11) NOT NULL,
+  `idEspecialidad` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `list_especialidad`
+--
+
+INSERT INTO `list_especialidad` (`idList_especialidad`, `idTrabajador`, `idEspecialidad`) VALUES
+(1, 2, 1),
+(2, 4, 2),
+(3, 5, 2),
+(4, 6, 4),
+(5, 7, 4),
+(6, 8, 4),
+(7, 9, 4),
+(8, 10, 4),
+(9, 11, 4),
+(10, 12, 4),
+(11, 13, 4),
+(12, 14, 4),
+(13, 15, 4),
+(14, 16, 4),
+(15, 4, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `list_materiales`
+--
+
+CREATE TABLE `list_materiales` (
+  `idDet_listMat` int(11) NOT NULL,
+  `idCirugia` int(11) NOT NULL,
+  `idMaterial` int(11) NOT NULL,
+  `cantidad` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `list_materiales`
+--
+
+INSERT INTO `list_materiales` (`idDet_listMat`, `idCirugia`, `idMaterial`, `cantidad`) VALUES
+(1, 1, 1, 1),
+(2, 1, 3, 2),
+(3, 2, 2, 1),
+(4, 2, 4, 1),
+(5, 3, 1, 1),
+(6, 3, 4, 1),
+(7, 3, 5, 1),
+(8, 3, 6, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `list_permiso`
+--
+
+CREATE TABLE `list_permiso` (
+  `idList_permiso` int(11) NOT NULL,
+  `idTipoUsuario` int(11) NOT NULL,
+  `idPermiso` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `list_permiso`
+--
+
+INSERT INTO `list_permiso` (`idList_permiso`, `idTipoUsuario`, `idPermiso`) VALUES
+(1, 1, 1),
+(2, 2, 1),
+(3, 3, 2),
+(4, 2, 3),
+(5, 1, 2),
+(6, 1, 3);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `list_procedimiento`
+--
+
+CREATE TABLE `list_procedimiento` (
+  `idList_procedimiento` int(11) NOT NULL,
+  `idCirugia` int(11) NOT NULL,
+  `idProcedimiento` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `list_procedimiento`
+--
+
+INSERT INTO `list_procedimiento` (`idList_procedimiento`, `idCirugia`, `idProcedimiento`) VALUES
+(1, 7, 2),
+(2, 7, 3),
+(3, 8, 5),
+(4, 9, 5),
+(5, 9, 1),
+(6, 10, 5),
+(7, 10, 3),
+(8, 11, 5),
+(9, 12, 5),
+(10, 13, 5),
+(11, 14, 5),
+(12, 15, 5),
+(13, 16, 5),
+(14, 17, 5),
+(15, 18, 5),
+(16, 19, 5),
+(17, 20, 5),
+(18, 21, 5),
+(19, 22, 5),
+(20, 23, 5),
+(21, 24, 5),
+(22, 25, 5),
+(23, 26, 5),
+(24, 27, 5),
+(25, 28, 5),
+(26, 29, 5),
+(27, 30, 5),
+(28, 31, 5),
+(29, 32, 5),
+(30, 33, 5),
+(31, 34, 5),
+(32, 35, 5),
+(33, 36, 5),
+(34, 37, 5),
+(35, 38, 5),
+(36, 39, 5),
+(37, 40, 5),
+(38, 41, 5),
+(39, 42, 5),
+(40, 43, 5),
+(41, 44, 5),
+(42, 45, 5),
+(43, 46, 5),
+(44, 47, 5),
+(45, 48, 5),
+(46, 49, 5),
+(47, 50, 5),
+(48, 51, 5);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `material`
+--
+
+CREATE TABLE `material` (
+  `idMaterial` int(11) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `medida` varchar(10) NOT NULL,
+  `idTipoMat` int(11) NOT NULL,
+  `marca` varchar(20) NOT NULL,
+  `imagen` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `material`
+--
+
+INSERT INTO `material` (`idMaterial`, `nombre`, `medida`, `idTipoMat`, `marca`, `imagen`) VALUES
+(1, 'RESECTOR', '3.5 mm', 1, 'STRYKER', ''),
+(2, 'RESECTOR', '4.0 mm', 1, 'STRYKER', ''),
+(3, 'TURBO VAC', '3.5 mm', 2, 'ARTHROCARE', ''),
+(4, 'MICRO BUSH', '3.5 mm', 2, 'STRYKER', ''),
+(5, 'HOMBRO', '', 3, '', ''),
+(6, 'BARREL BUR', '3.5 mm', 4, 'STRYKER', ''),
+(7, 'RODILLA', '', 3, '', ''),
+(8, 'BARREL BUR', '2.5 mm', 4, 'STRYKER', ''),
+(9, 'cabestrillo', 'normal', 5, 'ipot', 'cabestrillo.png'),
+(10, 'bota walker', 's', 5, 'ipot', 'bota-walker.png'),
+(11, 'plantilla de silicona', 's', 5, 'ipot', 'plantilla-silicona.png'),
+(12, 'cojin lumbar', 's', 5, 'ipot', 'cojin-lumbar.png'),
+(13, 'rodete de fibra', 's', 5, 'ipot', 'rodete-fibra.png'),
+(14, 'almohada ortopedica', 'standar', 5, 'ipot', 'almohada.png'),
+(15, 'muletas', 'standar', 5, 'ipot', 'muletas.png'),
+(16, 'codera', 's', 5, 'ipot', 'codera.png'),
+(17, 'codera codo de tenista', 's', 5, 'ipot', 'codera-codo-tenista.png'),
+(18, 'almohadilla cervical', 's', 5, 'standard', 'almohadilla-cervical.png'),
+(19, 'muñequera', 's', 5, 'ipot', 'muñequera.png'),
+(20, 'chata de acero', 'standar', 5, 'ipot', 'chata-acero.png'),
+(21, 'ferula digital - sapito', 's', 5, 'ipot', 'ferula-digital-sapito.png'),
+(22, 'ferula digital - pinza', 's', 5, 'ipot', 'ferula-digital-pinza.png'),
+(23, 'baston 4 patas - puño', 'standar', 5, 'ipot', 'baston-4patas-punio.png');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `paciente`
+--
+
+CREATE TABLE `paciente` (
+  `idPaciente` int(11) NOT NULL,
+  `hhcc` int(11) NOT NULL,
+  `dni` int(8) NOT NULL,
+  `nombre` varchar(30) NOT NULL,
+  `apPaterno` varchar(50) NOT NULL,
+  `apMaterno` varchar(50) NOT NULL,
+  `fecNac` date NOT NULL,
+  `correo` varchar(200) NOT NULL,
+  `telefono` int(8) NOT NULL,
+  `direccion` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `paciente`
+--
+
+INSERT INTO `paciente` (`idPaciente`, `hhcc`, `dni`, `nombre`, `apPaterno`, `apMaterno`, `fecNac`, `correo`, `telefono`, `direccion`) VALUES
+(1, 111111, 46578482, 'Karem', 'Gutierrez', 'Cervera', '1989-07-17', '', 0, ''),
+(2, 222222, 46305193, 'Luis Gustavo', 'Gonzales', 'Alvites', '1990-02-10', '', 0, ''),
+(3, 333333, 15962547, 'Maricarmen', 'Marin', 'SEpalabola', '2015-06-21', '', 0, ''),
+(4, 444444, 99999999, 'TIMOTEO', 'DE LA', 'REFURINFUNFLAY', '1944-08-14', '', 0, ''),
+(5, 124512, 45645685, 'Karina', 'Vargas', 'Chavez', '1975-06-21', '', 0, ''),
+(6, 787878, 45896523, 'kamila', 'Fernandez', 'Rodriguez', '2001-10-10', '', 0, ''),
+(7, 656565, 16621737, 'Esteban', 'Gutierrez', 'Cervera', '2005-04-05', '', 0, ''),
+(8, 125698, 16447073, 'Blanca', 'Olivos', 'Rodas', '1944-03-01', 'blanca@gmail.com', 235043, 'Cal. Viru 470 La Victoria Chiclayo'),
+(9, 568963, 16621736, 'Esther', 'Cervera', 'Olivos', '1971-05-14', 'esther@gmail.com', 998759877, 'Cal. Gregorio Marañon 171 San Borja'),
+(10, 123654, 12555965, 'Sebastian', 'Gutierrez', 'Cervera', '2005-01-05', 'sebastian@gmail.com', 235043, 'Cal. Viru 470 La Victoria Chiclayo'),
+(11, 125642, 45896548, 'Viviana', 'Soto', 'Guzman', '1985-10-15', 'v@gmail.com', 254125, 'Jr. Cualquiera 145'),
+(12, 454545, 95895689, 'katherine', 'Danila', 'Diaz', '2015-04-10', 'f@gmail.com', 521452, 'ninguno'),
+(13, 4564231, 1255454, 'Juanito', 'escarcha', 'fuegoscuro', '1954-02-01', 'a@a', 123456, 'hjh');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `permiso`
+--
+
+CREATE TABLE `permiso` (
+  `idPermiso` int(11) NOT NULL,
+  `nombPermiso` varchar(20) NOT NULL,
+  `desPermiso` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `permiso`
+--
+
+INSERT INTO `permiso` (`idPermiso`, `nombPermiso`, `desPermiso`) VALUES
+(1, 'soft_sop', '  Sala de Operaciones'),
+(2, 'reg_cita', 'Registrar Citas'),
+(3, 'reg_visita_medica', 'Registrar Visita Médica');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `personal_cirugia`
+--
+
+CREATE TABLE `personal_cirugia` (
+  `idPersonalCir` int(11) NOT NULL,
+  `idCirugia` int(11) NOT NULL,
+  `idTrabajador` int(11) NOT NULL,
+  `descripcion` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `personal_cirugia`
+--
+
+INSERT INTO `personal_cirugia` (`idPersonalCir`, `idCirugia`, `idTrabajador`, `descripcion`) VALUES
+(1, 1, 2, 'Principal');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `post`
+--
+
+CREATE TABLE `post` (
+  `id` int(11) NOT NULL,
+  `autorId` int(11) NOT NULL,
+  `post` varchar(200) NOT NULL,
+  `subdescripcion` varchar(500) NOT NULL,
+  `contenido` varchar(5000) NOT NULL,
+  `imagen` varchar(100) NOT NULL,
+  `fecha` date NOT NULL,
+  `modificado` date NOT NULL,
+  `base_url` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `post`
+--
+
+INSERT INTO `post` (`id`, `autorId`, `post`, `subdescripcion`, `contenido`, `imagen`, `fecha`, `modificado`, `base_url`) VALUES
+(1, 4, 'Cuando tu hijo empiece a caminar…\n', 'El desarrollo de las piernas y del pie de los niños es progresivo. Cuando un niño nace, generalmente tiene las piernecitas arqueadas, como ( ) y eso es producto de la posicion uterina y de otros factores mas. Conforme va creciendo el niño, la piernitas se van abriendo, y a la edad de 3 años, tienen una forma más de X (rodillas juntas, tobillos abiertos) Esto es mas evidente en niños gorditos. Luego estas piernitas van tomando su alineacion normal alrededor de los 7 años.', '¿Por qué no debemos intentar parar a nuestros hijos antes de tiempo?? Porque estaremos quemando etapas. El propio niño es quien por sus propios medios, cuando este fisiologicamente listo, se parará. Primero, alrededor de los 3 meses, controlan la cabeza. Esto es muy importante para que luego se puedan sentar y se les pueda cargar sin problemas. Luego, alrededor de los 6 meses, se sientan. Luego aprenden a darse la vuelta. Como a los 10 meses gatean (hay caso de niños que no gatean, lo ideal es que si lo hagan porque mejora la coordinación y prepara para las “futuras” caidas. Pero si tu hijo no gatea no te estreses, a lo mejor camina sin gatear). Y alrededor del año empiezan a caminar (primero se ponen de pie SOLITOS. Las niñas generalmente caminan mas temprano que los niños. Asi somos, desesperadas).\n\nMuchas veces nosotros como padres quisieramos ver a nuestros hijos corriendo desde muy temprana edad. Peor si tenemos familia o amigos con hijos contemporaneos que ya lo están haciendo. Pero debemos tener paciencia. Cada niño tiene su ritmo. Y uno no debe desesperarse. Mi hijo cumple mañana 1 año 3 meses y recién desde hace 2 dias ha comenzado a dar unos pasitos sin ayuda. Obvamente yo ya me estaba preocupando como madre, pero como médico sabia que cada niño tiene su tiempo y que esto no influirá en su futuro. No hay ningun estudio que relacione a los niños que caminaron temprano con mejores deportistas o algo asi.\n\n¿Que hacer entonces? Primero, hay que evitar estarlo parando, porque cuando son pequeños, sus piernas no soportan aun el peso de su cuerpo. Y si, se pueden arquear (por el peso que soportan). Segundo, evitar ponerlos en un andador cuando todavia no se paran (a veces es necesario porque una no sabe donde mas ponerlos). El andador puede acostumbrarlo a flojo, porque caminara sin esfuerzo. Tercero, acostúmbralo a que camine sin zapatos (con medias antiresbalón). El mejor ejercicio para que se forme correctamente un pie, es que utilice su propio pie. Que camine sin zapatos. Y obviamente, cuando salga a la calle, ponle sus zapatitos, pero éstos deben ser los mas cómodos posible. Que sean flexibles, especiales para empezar a caminar. Que tu puedas doblar la suela. Porque si es muy duro el bebé caminara con el pie como una plancha y no aprendera el patrón normal de la marcha que es talón-planta-punta. Debes hacer una buena inversión, imposible que encuentres un buen zapatito para bebé a un precio de mercadito (en realidad, los bebes traen muchos gastos pero somos felices con ellos).\nOlvídate de la posibilidad de que tenga pie plano hasta los 2 años, porque recien a esa edad el niño habra adquirido un patron de marcha mas normal y recien se podra evaluar el pie plano. Y si mete los pies al caminar, también déjalo ser hasta los dos años. Hay algunos ejercicios que puedes hacer en casa, pero en lineas generales la edad de 2 años es la edad clave.', 'caminar.jpg', '2016-02-04', '2016-02-04', ''),
+(2, 4, 'Esguince de Tobillo\n', 'Pasa a cada rato. Estás jugando futbol, haces una mala pisada y te doblas el tobillo. O estás con unos tacos altísimos, pisas mal y te doblas el tobillo. Aparece un dolor, que puede ser casi imperceptible en el momento (sobretodo si el cuerpo está caliente) o que simplemente no te dejará caminar.\n\nCualquiera que sea el caso, es probable que al día siguiente el tobillo se te hinche, quizás se te ponga morado un poco y probablemente dolerá un poco más.\n\n¿Qué hacer cuando sucede esto?', 'Lo más importante es recordar que todo evento agudo (es decir, que ocurre de imprevisto) requiere de 4 cosas básicas: Reposo, Hielo, Compresión y Elevación (RICE en inglés)\n\nReposo: A descansar la extremidad afectada. Es decir, limitar el apoyar el tobillo torcido, caminar poco.\n\nHielo: Lo mejor para las lesiones agudas es el HIELO. No las cremas. Generalmente las frotaciones con cremas no son tan efectivas como el hielo y pueden producir un incremento de la hinchazón. La razón es que el frio “cierra” los pequeños vasos sanguíneos que se rompen cuando uno se tuerce algo, y al cerrarlos no habrá mayor hinchazón ni mayor hematoma. En cambio el calor (que también se produce al frotar una crema contra la piel), “abre” los vasos, y el hematoma se puede hacer más grande, lo mismo que la hinchazón. El calor funciona mejor para eventos crónicos (por ejemplo una artrosis). El frio es ideal para los eventos traumáticos agudos (essguinces, caidas, golpes, etc). Lo ideal es 15 a 20 min, cada 2 a 4 horas por los primeros 3 dias.\n\nCompresión: Ayuda vendarse el tobillo por ejemplo, porque se limitará la hinchazón y se mantendrá un poco rígido el tobillo, lo cual producirá menor dolor. Ten en cuenta que el vendaje no debe estar muy ajustado.\n\nElevación: Elevar el miembro afectado ayuda a disminuir la inflamación. En el caso del tobillo, descansar con la pierna sobre unas almohadas es lo ideal.\n\nHay que tener en cuenta lo siguiente: NO TODOS los esguinces requieren de yeso. Sólo si está muy hinchado o muy doloroso (no puedes apoyar la pierna sin dolor) es probable que necesites una bota de yeso. Necesitas ir al médico para que evalúe la gravedad de la lesión y determine qué tipo de tratamiento necesitaras.\n\n ', 'esguince.jpg', '2016-02-20', '2016-02-20', ''),
+(3, 2, 'video 1', 'modificar mediante codeigniter 6', '<b>probando la modificacion</b>', 'home-bg.jpg', '2016-06-07', '2016-06-16', ''),
+(5, 1, 'video 2', 'archivo de prueba', '<div style="text-align: center;"><ul><li style="text-align: left;"><span style="line-height: 1.4;">ingreso de datos nuevos</span></li></ul></div>', '12472424_972176249534529_593384843913883722_n.jpg', '2016-06-12', '2016-06-16', ''),
+(6, 2, 'MI POST CON RICHTEXT', 'muestra 1', '<span style="line-height: 33.6px;"><b><font size="3">Este post fue creado con helpers y scrips</font></b></span><br><div><ol><li><span style="line-height: 1.4;">ojala me salga</span><br></li></div>', '13254450_10208030364228551_6148285259084433904_n.jpg', '2016-06-13', '2016-06-13', ''),
+(7, 1, 'mucho post', 'jkljlj', 'jklkj', '660_Front.png', '2016-10-10', '2016-10-10', ''),
+(10, 2, 'giugiug', 'guiogiug', 'aaa', 'IMG_20150705_142846.jpg', '2016-10-15', '2016-10-15', ''),
+(11, 1, 'modificar post', 'prueba para modificar un post con richtext', '<blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;">comparacion de ingresar nuevo post con modificarlo</blockquote>', '13254450_10208030364228551_6148285259084433904_n.jpg', '2016-06-15', '2016-06-15', ''),
+(12, 2, 'Curso Codeigniter por mi', 'osito babosito recontra estupidito', '........', '', '2016-06-16', '2016-06-16', '');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `procedimiento`
+--
+
+CREATE TABLE `procedimiento` (
+  `idProcedimiento` int(11) NOT NULL,
+  `descripcion` varchar(50) NOT NULL,
+  `cie10` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `procedimiento`
+--
+
+INSERT INTO `procedimiento` (`idProcedimiento`, `descripcion`, `cie10`) VALUES
+(1, 'ARTROSCOPIA RODILLA DERECHA', ''),
+(2, 'ARTROSCOPIA RODILLA IZQUIERDA', ''),
+(3, 'ARTROSCOPIA HOMBRO DERECHO', ''),
+(4, 'ARTROSCOPIA HOMBRO IZQUIERDO', ''),
+(5, 'ARTROCENTESIS', '');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tipo_material`
+--
+
+CREATE TABLE `tipo_material` (
+  `idTipoMat` int(11) NOT NULL,
+  `tipoMat` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tipo_material`
+--
+
+INSERT INTO `tipo_material` (`idTipoMat`, `tipoMat`) VALUES
+(1, 'HOJA SHAVER'),
+(2, 'PUNTA DE RADIOFRECUENCIA'),
+(3, 'Campo artroscopia'),
+(4, 'Hoja Fresa'),
+(5, 'ortesis');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tipo_usuario`
+--
+
+CREATE TABLE `tipo_usuario` (
+  `idTipoUsuario` int(11) NOT NULL,
+  `descTipoUsu` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tipo_usuario`
+--
+
+INSERT INTO `tipo_usuario` (`idTipoUsuario`, `descTipoUsu`) VALUES
+(1, 'ADMINISTRADOR'),
+(2, 'MEDICO'),
+(3, 'Secretaria'),
+(4, 'Call Center');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `trabajador`
+--
+
+CREATE TABLE `trabajador` (
+  `idTrabajador` int(11) NOT NULL,
+  `idUsuario` int(11) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `apPaterno` varchar(30) NOT NULL,
+  `apMaterno` varchar(30) NOT NULL,
+  `fechaNac` date NOT NULL,
+  `nombreAb` varchar(100) NOT NULL,
+  `foto` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `trabajador`
+--
+
+INSERT INTO `trabajador` (`idTrabajador`, `idUsuario`, `nombre`, `apPaterno`, `apMaterno`, `fechaNac`, `nombreAb`, `foto`) VALUES
+(1, 1, 'KAREM ESTHER', 'GUTIERREZ', 'CERVERA', '1989-07-17', 'Karem G.', ''),
+(2, 2, 'luis clemente', 'aguilar', 'del rosario', '1990-02-10', 'clemente A.', 'caguilar.jpg'),
+(3, 3, 'NANCY', 'URDANEGUI', 'NOSE', '1970-01-20', 'Nancy U.', ''),
+(4, 4, 'gustavo dario', 'delgado', 'razuri', '1971-09-17', 'Dr. -----', 'gdelgado.jpg'),
+(5, 5, 'humberto', 'maceda', 'muñoz', '1950-08-15', 'Dr. H. Maceda', 'hmaceda.jpg'),
+(6, 6, 'gonzalo', 'castillo', 'velasco', '1971-05-15', 'G. Castillo', 'gcastillo.JPG'),
+(7, 7, 'baldwin', 'angelino', 'espinoza', '1944-10-10', 'b. angelino', 'bangelino.jpg'),
+(8, 8, 'jose', 'castillo', 'ramirez', '1944-10-10', 'j. castillo', 'jcastillo.jpg'),
+(9, 9, 'luis', 'barriales', 'gamarra', '1944-10-10', 'l. barriales', 'desconocido.jpg'),
+(10, 10, 'ever', 'corahua', 'romero', '1944-10-10', 'e. corahua', 'desconocido.jpg'),
+(11, 11, 'dario', 'delgado', 'alvarez', '1944-10-10', 'd. delgado', 'ddelgado.jpg'),
+(12, 12, 'katya', 'delgado', 'razuri', '1944-10-10', 'k. delgado', 'kdelgado.jpg'),
+(13, 13, 'henry', 'deza', 'palle', '1944-10-10', 'h. deza', 'desconocido.jpg'),
+(14, 14, 'joel', 'garay', 'espinoza', '1944-10-10', 'j. garay', 'jgaray.jpg'),
+(15, 15, 'jorge', 'gomez', 'tello', '1944-11-10', 'j. gomez', 'desconocido.jpg'),
+(16, 16, 'raúl', 'gutiérrez', 'segura', '1944-10-10', 'r. gutierrez', 'rgutierrez.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuario`
+--
+
+CREATE TABLE `usuario` (
+  `idUsuario` int(11) NOT NULL,
+  `idTipoUsuario` int(11) NOT NULL,
+  `nickname` varchar(30) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`idUsuario`, `idTipoUsuario`, `nickname`, `email`, `password`) VALUES
+(1, 1, 'karem0201', 'karem@gmail.com', '123'),
+(2, 2, 'CAGUILAR', 'caguilar@ipot.com.pe', '456'),
+(3, 3, 'NURDANEGUI', 'secretaria@gmail.com', '789'),
+(4, 2, 'GDELGADO', 'gdelgado@ipot.com.pe', '123'),
+(5, 2, 'hmaceda', 'hmaceda@ipot.crp.pe', '123'),
+(6, 2, 'gcastillo', 'gcastillo@ipot.crp.pe', '123'),
+(7, 2, 'bangelino', 'bangelino@ipot.om.pe', '123'),
+(8, 2, 'jcastillo', 'jcastillo@ipot.com.pe', '123'),
+(9, 2, 'lbarriales', 'lbarriales@ipot.com.pe', '123'),
+(10, 2, 'ecorahua', 'ecorahua@com.pe', '123'),
+(11, 2, 'ddelgado', 'ddelgado@com.pe', '123'),
+(12, 2, 'kdelgado', 'kdelgado@ipot.com.pe', '123'),
+(13, 2, 'hdeza', 'hdeza@ipot.com.pe', '123'),
+(14, 2, 'jgaray', 'jgaray@ipot.com.pe', '123'),
+(15, 2, 'jgomez', 'jgomez@ipot.com.pe', '123'),
+(16, 2, 'rgutierrez', 'rgutierrez@ipot.com.pe', '123');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `atributo`
+--
+ALTER TABLE `atributo`
+  ADD PRIMARY KEY (`idAtributo`);
+
+--
+-- Indices de la tabla `cirugia`
+--
+ALTER TABLE `cirugia`
+  ADD PRIMARY KEY (`idCirugia`);
+
+--
+-- Indices de la tabla `cita_v1`
+--
+ALTER TABLE `cita_v1`
+  ADD PRIMARY KEY (`idCita`);
+
+--
+-- Indices de la tabla `especialidad`
+--
+ALTER TABLE `especialidad`
+  ADD PRIMARY KEY (`idEspecialidad`);
+
+--
+-- Indices de la tabla `horario`
+--
+ALTER TABLE `horario`
+  ADD PRIMARY KEY (`idHorario`);
+
+--
+-- Indices de la tabla `horario_dia`
+--
+ALTER TABLE `horario_dia`
+  ADD PRIMARY KEY (`idHorario_dia`);
+
+--
+-- Indices de la tabla `list_atributo`
+--
+ALTER TABLE `list_atributo`
+  ADD PRIMARY KEY (`idList_atributo`);
+
+--
+-- Indices de la tabla `list_especialidad`
+--
+ALTER TABLE `list_especialidad`
+  ADD PRIMARY KEY (`idList_especialidad`);
+
+--
+-- Indices de la tabla `list_materiales`
+--
+ALTER TABLE `list_materiales`
+  ADD PRIMARY KEY (`idDet_listMat`);
+
+--
+-- Indices de la tabla `list_permiso`
+--
+ALTER TABLE `list_permiso`
+  ADD PRIMARY KEY (`idList_permiso`);
+
+--
+-- Indices de la tabla `list_procedimiento`
+--
+ALTER TABLE `list_procedimiento`
+  ADD PRIMARY KEY (`idList_procedimiento`);
+
+--
+-- Indices de la tabla `material`
+--
+ALTER TABLE `material`
+  ADD PRIMARY KEY (`idMaterial`);
+
+--
+-- Indices de la tabla `paciente`
+--
+ALTER TABLE `paciente`
+  ADD PRIMARY KEY (`idPaciente`);
+
+--
+-- Indices de la tabla `permiso`
+--
+ALTER TABLE `permiso`
+  ADD PRIMARY KEY (`idPermiso`);
+
+--
+-- Indices de la tabla `personal_cirugia`
+--
+ALTER TABLE `personal_cirugia`
+  ADD PRIMARY KEY (`idPersonalCir`);
+
+--
+-- Indices de la tabla `post`
+--
+ALTER TABLE `post`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `autorId` (`autorId`),
+  ADD KEY `autorId_2` (`autorId`),
+  ADD KEY `autorId_3` (`autorId`);
+
+--
+-- Indices de la tabla `procedimiento`
+--
+ALTER TABLE `procedimiento`
+  ADD PRIMARY KEY (`idProcedimiento`);
+
+--
+-- Indices de la tabla `tipo_material`
+--
+ALTER TABLE `tipo_material`
+  ADD PRIMARY KEY (`idTipoMat`);
+
+--
+-- Indices de la tabla `tipo_usuario`
+--
+ALTER TABLE `tipo_usuario`
+  ADD PRIMARY KEY (`idTipoUsuario`);
+
+--
+-- Indices de la tabla `trabajador`
+--
+ALTER TABLE `trabajador`
+  ADD PRIMARY KEY (`idTrabajador`);
+
+--
+-- Indices de la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  ADD PRIMARY KEY (`idUsuario`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `atributo`
+--
+ALTER TABLE `atributo`
+  MODIFY `idAtributo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT de la tabla `cirugia`
+--
+ALTER TABLE `cirugia`
+  MODIFY `idCirugia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+--
+-- AUTO_INCREMENT de la tabla `cita_v1`
+--
+ALTER TABLE `cita_v1`
+  MODIFY `idCita` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT de la tabla `especialidad`
+--
+ALTER TABLE `especialidad`
+  MODIFY `idEspecialidad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT de la tabla `horario`
+--
+ALTER TABLE `horario`
+  MODIFY `idHorario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT de la tabla `horario_dia`
+--
+ALTER TABLE `horario_dia`
+  MODIFY `idHorario_dia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT de la tabla `list_atributo`
+--
+ALTER TABLE `list_atributo`
+  MODIFY `idList_atributo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT de la tabla `list_especialidad`
+--
+ALTER TABLE `list_especialidad`
+  MODIFY `idList_especialidad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+--
+-- AUTO_INCREMENT de la tabla `list_materiales`
+--
+ALTER TABLE `list_materiales`
+  MODIFY `idDet_listMat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT de la tabla `list_permiso`
+--
+ALTER TABLE `list_permiso`
+  MODIFY `idList_permiso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT de la tabla `list_procedimiento`
+--
+ALTER TABLE `list_procedimiento`
+  MODIFY `idList_procedimiento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+--
+-- AUTO_INCREMENT de la tabla `material`
+--
+ALTER TABLE `material`
+  MODIFY `idMaterial` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+--
+-- AUTO_INCREMENT de la tabla `paciente`
+--
+ALTER TABLE `paciente`
+  MODIFY `idPaciente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+--
+-- AUTO_INCREMENT de la tabla `permiso`
+--
+ALTER TABLE `permiso`
+  MODIFY `idPermiso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT de la tabla `post`
+--
+ALTER TABLE `post`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+--
+-- AUTO_INCREMENT de la tabla `procedimiento`
+--
+ALTER TABLE `procedimiento`
+  MODIFY `idProcedimiento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT de la tabla `tipo_material`
+--
+ALTER TABLE `tipo_material`
+  MODIFY `idTipoMat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT de la tabla `tipo_usuario`
+--
+ALTER TABLE `tipo_usuario`
+  MODIFY `idTipoUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT de la tabla `trabajador`
+--
+ALTER TABLE `trabajador`
+  MODIFY `idTrabajador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+--
+-- AUTO_INCREMENT de la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
