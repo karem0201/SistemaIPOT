@@ -54,14 +54,20 @@ class Post extends CI_Model
   $numero= $this->db->query("SELECT count(*) as number FROM post")->row()->number;
   return intval($numero);
   }
- public function get_pagination($num_per_page)
+ public function get_pagination($porpagina,$segmento)
  {
    $this->db->select('p.subdescripcion,t.nombre,p.imagen,t.nombreAb');
    $this->db->from('post p');
    $this->db->join('trabajador t', ' p.autorId = t.idTrabajador','INNER');
-   $q = $this->db->get('post',2,0);
+   $q = $this->db->get('post',$porpagina,$segmento);
    return $q->result();
  }
+
+ // $this->db->select('');
+ //   $this->db->from('usuario u');
+ //   $this->db->join('post p', ' u.id = p.autorId ');
+ //    $q = $this->db->get('post',$num_per_page,$this->uri->segment(3));
+ //   return $q->result();
 
 public function updatePost($post=null)
 {

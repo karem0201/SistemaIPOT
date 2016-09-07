@@ -16,6 +16,24 @@
         </div>
 
         <div class="col-md-8 ">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="input-group">
+                <label for="">filtros</label>
+                  <select id"especialidad">
+                    <option value="-1">lugar de dolencia</option>
+                    <?php
+                    $opt = "";
+                    foreach ($especialidad as $key) {
+                        $opt .='<option value="'.$key->idEspecialidad .'" >'.$key->descripcion.'</option>';
+                    }
+                    echo $opt;
+                    ?>
+                  </select>
+              </div>
+            </div>
+          </div>
+
           <div class="row table-pro" >
           <?php foreach ($materiales as $key){ ?>
             <div class="col-md-4 col-sm-4 col-xs-6 spc">

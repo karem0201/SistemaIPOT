@@ -5,13 +5,13 @@
 class Mtrabajador extends CI_Model
 {
 
-  public function mostrarMedico()
+  public function Medicos()
   {
-    $this->db->select("t.idTrabajador,t.nombre,t.apPaterno,t.apMaterno,t.foto");//t.nombre,t.apPaterno,t.apMaterno,t.foto,e.descripcion
+    $this->db->select("*");//t.nombre,t.apPaterno,t.apMaterno,t.foto,e.descripcion
     $this->db->distinct();
     $this->db->from("trabajador t");
-    $this->db->join('list_especialidad l', ' t.idTrabajador =l.idTrabajador','INNER');
-    $this->db->join('especialidad e', ' l.idEspecialidad =e.idEspecialidad','INNER');
+    $this->db->join('usuario u', 'u.idUsuario = t.idUsuario', 'INNER');
+    $this->db->where('U.idTipoUsuario', 2);
     $this->db->order_by('t.apPaterno ASC, t.apMaterno ASC','t.nombre ASC');
     $q = $this->db->get();
     return $q->result();
@@ -63,6 +63,18 @@ class Mtrabajador extends CI_Model
     return $q->result();
   }
 
+  public function mostrarMedico()
+  {
+    $this->db->select("t.idTrabajador,t.nombre,t.apPaterno,t.apMaterno,t.foto");//t.nombre,t.apPaterno,t.apMaterno,t.foto,e.descripcion
+    $this->db->distinct();
+    $this->db->from("trabajador t");
+    $this->db->join('list_especialidad l', ' t.idTrabajador =l.idTrabajador','INNER');
+    $this->db->join('especialidad e', ' l.idEspecialidad =e.idEspecialidad','INNER');
+    $this->db->order_by('t.apPaterno','ASC');
+    $q = $this->db->get();
+    return $q->result();
+  }
+
   public function medicoByHorario($dia='',$hora='',$esp='')
   {
     if($dia<>''and $hora<>'')
@@ -80,6 +92,26 @@ class Mtrabajador extends CI_Model
 
       $q = $this->db->get();
       return $q->result();
+    }
+  }
+
+  public function modificarEspecialidad($data='')
+  {
+    if($data<>'')
+    {
+      $this->db->delete("list_especialidad",array('idTrabajador'=>$data['medico']));//t.nombre,t.apPaterno,t.apMaterno,t.foto,e.descripcion
+      for ($i=0; $i < count($data['especialidad']); $i++) {
+        $new = array(
+          'idTrabajador'=>$data['medico'],
+          'idEspecialidad'=>$data['especialidad'][$i]
+        );
+        $this->db->insert('list_especialidad', $new);
+      }
+
+
+
+
+      return $new;
     }
   }
 }

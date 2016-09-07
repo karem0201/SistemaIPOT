@@ -331,6 +331,9 @@
   #tienda h1{
     font-size: 24px;
   }
+.navbar-brand img{
+    height: 50px;
+  }
 
 }
 

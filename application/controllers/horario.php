@@ -21,7 +21,7 @@ class Horario extends CI_Controller
 
   public function mostrarByEspecialidad()
   {
-    $id=$this->input->post('idEspecialidad');
+    $id=$this->input->post();
     $q=$this->mhorario->mostrarByEspecialidad($id);
     echo json_encode($q);
   }

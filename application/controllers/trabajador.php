@@ -21,7 +21,6 @@ class trabajador extends CI_Controller
   public function medicoByEspecialidad()
   {
     $id = $this->input->post('opt');
-
     $q= $this->mtrabajador->listEspecialidad($id);
     echo json_encode($q);
   }
@@ -33,6 +32,14 @@ class trabajador extends CI_Controller
     $idEsp = $this->input->post('idEspecialidad');
     $q= $this->mtrabajador->medicoByHorario($dia,$hora,$idEsp);
     echo json_encode($q);
+  }
+
+  public function modificarEspecialidad()
+  {
+    $data = $this->input->post();
+
+    $q= $this->mtrabajador->modificarEspecialidad($data);    
+    header("Location: " . base_url(). "Administrador/modificarEspecialidad");
   }
 }
 

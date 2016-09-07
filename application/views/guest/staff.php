@@ -31,8 +31,6 @@
                                     </div>
                                     <div class="media-body">
                                         <div id="optEspecialidad">
-                                          <input type="radio" name="options" value="-1" checked = "checked"/> Todos<br>
-
                                           <?php
                                           $radio = "";
                                           foreach ($especialidad as $key) {
@@ -117,6 +115,7 @@ $(document).ready( function() {
       var optEsp = $("#optEspecialidad");
       var optDias = $("#optDias");
 
+      $('input[value=1]').attr('checked','checked');
       optEsp.on('click','input',function(){
              var opt = $(this).attr('value');
              var request;

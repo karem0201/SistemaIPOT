@@ -82,7 +82,7 @@
                               ids[index]=tr.eq(index).find("td").eq(0).text();
                               cants[index]=tr.eq(index).find("td").eq(2).text();
                         });
-                        $("#arrayMat").attr('value',JSON.stringify(idCant.push(ids)));
+                        $("#arrayMat").attr('value',JSON. (idCant.push(ids)));
                         console.log(JSON.stringify(ids));
                         $("#arrayCant").attr('value',cants);
                   };

@@ -34,7 +34,10 @@ class Mhorario extends CI_Model
     $this->db->join('especialidad e', ' l.idEspecialidad =e.idEspecialidad','INNER');
     $this->db->join('horario h', ' h.idTrabajador =t.idtrabajador','INNER');
     $this->db->join('horario_dia hd', ' h.idHorario_dia =hd.idHorario_dia','INNER');
-    $this->db->where('e.idEspecialidad',$value);
+    $this->db->where('e.idEspecialidad',$value['idEspecialidad']);
+    if($value['idMedico']>0){
+      $this->db->where('t.idTrabajador',$value['idMedico']);
+    }
     $this->db->order_by('t.apPaterno','ASC');
     $q = $this->db->get();
     return $q->result();
