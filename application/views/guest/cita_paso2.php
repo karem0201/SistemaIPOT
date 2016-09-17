@@ -1,9 +1,9 @@
-<div class="modal fade" id="modal_medico" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="" id="modal_medico" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
                     <button type="button" class = "close" data-dismiss="modal" aria-hidden="true" id="buttonclose">&times</button>
-                    <h4>SELECCIONE MEDICO</h4>
+                    <h4>Detalles</h4>
               </div> <!-- modal-header -->
               <div class="modal-body ">
                 <div class="row" id="content-medico">

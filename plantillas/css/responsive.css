@@ -201,10 +201,13 @@
 }
 
 /* xs */
-@media (max-width: 767px) {
+@media (min-width: 581px) and (max-width: 767px) {
   .container > .navbar-header, .container > .navbar-collapse{
     margin-left: 10px;
   }
+  .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+    color: #000;
+}
 
   .top-number{
     font-size: 14pt;
@@ -337,8 +340,11 @@
 
 }
 
-/* XS Portrait */
+/* xXS Portrait */
 @media (max-width: 580px) {
+  .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+    color: #000;
+}
   .top-number{
     font-size: 8pt;
     line-height: 18px;

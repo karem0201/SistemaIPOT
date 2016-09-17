@@ -1,11 +1,10 @@
-<div class="banner" style="background-image:url(<?=base_url()?>/plantillas/images/slider/ladrillos.png) ;">
+<div id="out-section">
+    <h1>Podolog&iacute;a IPOT- Clínica Ricardo Palma</h1>
+    <h2>Separa tu cita: (01) 224 2224 anexo 4070</h2>
 </div>
 <section id="tienda">
   <div id="page-wraper" class="container">
-    <div class="titulo">
-        <h1>Podolog&iacute;a IPOT- Clínica Ricardo Palma</h1>
-        <h2>Separa tu cita: (01) 224 2224 anexo 4070</h2>
-    </div>
+
     <div class="row ser-podologia">
       <div class="col-md-3">
           <img src="<?= base_url()?>plantillas/images/services/podologia-1.png" alt="uña_encarnada" />

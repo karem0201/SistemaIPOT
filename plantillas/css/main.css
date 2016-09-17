@@ -277,9 +277,7 @@ input.search-form:hover {
 .navbar-brand {
   padding: 0;
   margin:0;
-
 }
-
 
 
 .navbar {
@@ -2986,7 +2984,7 @@ list-style: none;
   color:#fff;
   font-weight: bold;
   font-size: 1.2em;
-  background: #10436b;
+  background: #000;
 }
 
 #history:before {
@@ -2997,7 +2995,7 @@ list-style: none;
   height: 100%;
   background: url(../images/bg-salaespera.png) 50% 50% no-repeat;
   background-size: cover;
-  opacity: .5;
+  opacity: .25;
   background-attachment: fixed;
 }
 
@@ -3056,30 +3054,45 @@ padding: 10px;
 
 }
 
+#out-section {
+  margin: 0;
+  padding: 1px;
+  background-color:#00bcd4;
+  height: 180px;
+}
+#out-section  h1{
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 28pt;
+  font-variant: small-caps;
+  border-bottom:4px solid #8bc34a;
+  margin-top:100px;
+  position: relative;
+  text-align: center;
+  /*text-shadow: -3px -3px 3px #000, 3px 3px 3px #000, -3px 3px 3px #000, 3px -3px 3px #000;*/
+}
+/*#out-section  h1:before{
+  content: "";
+  padding: 0 15px;
+}*/
+
+#out-section h2 {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+}
+
+
 #tienda {
   position: relative;
   /*background: url(../images/partners/escaparate.png) 50% 50% no-repeat;*/
   background-size:cover;
-  padding: 50px;
+  padding: 30px 0;
   margin: 0;
 }
 
-#tienda .titulo h1{
-  color: #92bb63;
-  font-size: 28pt;
-  font-variant: small-caps;
-  border-bottom:4px solid #00bcd4;
-  margin:0;
-  /*text-shadow: -3px -3px 3px #000, 3px 3px 3px #000, -3px 3px 3px #000, 3px -3px 3px #000;*/
-}
-
-#tienda .titulo h2{
-  padding: 0;
-  margin: 0;
-  margin-bottom: 30px;
-  color: #e91e63;
-
-}
 
 #tienda .ser-podologia{
   margin: 0;
@@ -3113,6 +3126,48 @@ padding: 10px;
   font-size: 15px;
 }
 
+#modal_detalle{
+  top:15%;
+}
+
+#modal_detalle .modal-header{
+  padding: 5%;
+}
+
+#modal_detalle .modal-header h1{
+  padding: 0;
+  margin: 0 10px;
+  color:red;
+  font-size: 2.5em;
+  display: inline;
+  text-transform: capitalize;
+}
+
+#modal_detalle img{
+  padding: 0;
+  margin: 0;
+  float: left;
+  width: 30%;
+}
+
+#modal_detalle p{
+  padding: 0 20px;
+  margin: 2px 5px 20px 5px;
+  font-size: 1.1em;
+  display: flex;
+  flex-direction:column;
+  font-weight: bolder;
+  color:black;
+}
+
+#modal_detalle span{
+  padding: 0;
+  margin: 0;
+  font-size: 0.9em;
+  font-style: italic;
+  font-weight: normal;
+  color:#0c0665;
+}
 
 .table-pro{
   margin:0;
@@ -3122,6 +3177,7 @@ padding: 10px;
 
 .table-pro .spc{
   margin: 0;
+  padding: 0;
   border: 3px solid #fff;
   background-color: #fff ;
 }
@@ -3149,6 +3205,36 @@ padding: 10px;
   padding-top:5px;
 }
 
+.table-pro .sup{
+  margin: 0;
+  padding: 0;
+}
+
+
+.table-pro .links{
+  display: flex;
+  justify-content: space-between;;
+}
+
+.table-pro .links a:hover{
+  margin: 0;
+  padding: 0;
+  color: red;
+  font-weight: bolder;
+  font-size: 1em;
+  font-style: italic;
+  padding: 0px 1px;
+  cursor: pointer;
+}
+
+.table-pro .links a{
+  margin: 0;
+  padding: 0;
+  font-size: .9em;
+  font-style: italic;
+  padding: 0px 1px;
+  cursor: pointer;
+}
 .table-pro .texto p{
   color: blue;
   font-size: 10pt;
@@ -3504,4 +3590,15 @@ background: linear-gradient(to bottom, rgba(67,153,149,1) 0%, rgba(67,153,149,1)
 
 .sombra-curva:after {
   transform: rotate(3deg);
+}
+
+.btn-blue{
+  background: #216498;
+  color: #fff;
+  border: solid 2px #03a9f4;
+}
+
+.btn-blue:hover{
+  background: #10436b;
+  color: #fff;
 }
